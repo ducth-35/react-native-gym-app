@@ -1,4 +1,4 @@
-package com.template
+package com.app.news.explore
 
 import android.app.Application
 import com.facebook.react.PackageList
