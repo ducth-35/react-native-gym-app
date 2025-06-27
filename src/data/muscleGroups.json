@@ -1,0 +1,44 @@
+[
+  {
+    "id": "chest",
+    "name": "Ngực",
+    "icon": "💪",
+    "color": "#FF6B6B"
+  },
+  {
+    "id": "back",
+    "name": "Lưng",
+    "icon": "🏋️",
+    "color": "#4ECDC4"
+  },
+  {
+    "id": "shoulders",
+    "name": "Vai",
+    "icon": "💪",
+    "color": "#45B7D1"
+  },
+  {
+    "id": "arms",
+    "name": "Tay",
+    "icon": "💪",
+    "color": "#96CEB4"
+  },
+  {
+    "id": "legs",
+    "name": "Chân",
+    "icon": "🦵",
+    "color": "#FFEAA7"
+  },
+  {
+    "id": "abs",
+    "name": "Bụng",
+    "icon": "🔥",
+    "color": "#DDA0DD"
+  },
+  {
+    "id": "fullbody",
+    "name": "Toàn thân",
+    "icon": "🏃",
+    "color": "#FD79A8"
+  }
+]

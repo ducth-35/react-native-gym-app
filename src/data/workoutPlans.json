@@ -1,0 +1,155 @@
+[
+  {
+    "id": "beginner_7_day",
+    "name": "Lộ trình 7 ngày cho người mới",
+    "description": "Chương trình tập luyện cơ bản dành cho người mới bắt đầu",
+    "duration": 7,
+    "goal": "maintenance",
+    "difficulty": "Beginner",
+    "workouts": [
+      {
+        "day": 1,
+        "name": "Ngày 1: Toàn thân cơ bản",
+        "exercises": [
+          {
+            "exerciseId": "push_up",
+            "sets": 2,
+            "reps": "8-10",
+            "restTime": 60
+          },
+          {
+            "exerciseId": "squat",
+            "sets": 2,
+            "reps": "10-12",
+            "restTime": 60
+          },
+          {
+            "exerciseId": "plank",
+            "sets": 2,
+            "reps": "20-30 giây",
+            "restTime": 45
+          }
+        ],
+        "estimatedTime": 20
+      },
+      {
+        "day": 2,
+        "name": "Ngày 2: Nghỉ ngơi hoặc đi bộ nhẹ",
+        "exercises": [],
+        "estimatedTime": 0
+      },
+      {
+        "day": 3,
+        "name": "Ngày 3: Tập trung vào chân",
+        "exercises": [
+          {
+            "exerciseId": "squat",
+            "sets": 3,
+            "reps": "12-15",
+            "restTime": 60
+          }
+        ],
+        "estimatedTime": 15
+      },
+      {
+        "day": 4,
+        "name": "Ngày 4: Nghỉ ngơi",
+        "exercises": [],
+        "estimatedTime": 0
+      },
+      {
+        "day": 5,
+        "name": "Ngày 5: Tập trung vào thân trên",
+        "exercises": [
+          {
+            "exerciseId": "push_up",
+            "sets": 3,
+            "reps": "8-12",
+            "restTime": 60
+          },
+          {
+            "exerciseId": "plank",
+            "sets": 3,
+            "reps": "30-45 giây",
+            "restTime": 45
+          }
+        ],
+        "estimatedTime": 20
+      },
+      {
+        "day": 6,
+        "name": "Ngày 6: Toàn thân nhẹ",
+        "exercises": [
+          {
+            "exerciseId": "burpee",
+            "sets": 2,
+            "reps": "3-5",
+            "restTime": 90
+          }
+        ],
+        "estimatedTime": 15
+      },
+      {
+        "day": 7,
+        "name": "Ngày 7: Nghỉ ngơi hoàn toàn",
+        "exercises": [],
+        "estimatedTime": 0
+      }
+    ]
+  },
+  {
+    "id": "muscle_gain_30_day",
+    "name": "Lộ trình 30 ngày tăng cơ",
+    "description": "Chương trình tập luyện tăng cơ bắp trong 30 ngày",
+    "duration": 30,
+    "goal": "muscle_gain",
+    "difficulty": "Intermediate",
+    "workouts": [
+      {
+        "day": 1,
+        "name": "Ngày 1: Ngực & Tay sau",
+        "exercises": [
+          {
+            "exerciseId": "push_up",
+            "sets": 4,
+            "reps": "12-15",
+            "restTime": 75
+          }
+        ],
+        "estimatedTime": 45
+      },
+      {
+        "day": 2,
+        "name": "Ngày 2: Lưng & Tay trước",
+        "exercises": [
+          {
+            "exerciseId": "pull_up",
+            "sets": 4,
+            "reps": "6-10",
+            "restTime": 90
+          },
+          {
+            "exerciseId": "bicep_curl",
+            "sets": 3,
+            "reps": "12-15",
+            "restTime": 60
+          }
+        ],
+        "estimatedTime": 50
+      },
+      {
+        "day": 3,
+        "name": "Ngày 3: Chân & Mông",
+        "exercises": [
+          {
+            "exerciseId": "squat",
+            "sets": 4,
+            "reps": "15-20",
+            "restTime": 75
+          }
+        ],
+        "estimatedTime": 40
+      }
+    ]
+  }
+]
