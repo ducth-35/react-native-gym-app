@@ -83,7 +83,6 @@ export const TimerScreen: React.FC = () => {
                 keyboardType="numeric"
                 maxLength={2}
               />
-              <Text style={styles.timeLabel}>phút</Text>
             </View>
 
             <Text style={styles.timeSeparator}>:</Text>
@@ -97,7 +96,6 @@ export const TimerScreen: React.FC = () => {
                 keyboardType="numeric"
                 maxLength={2}
               />
-              <Text style={styles.timeLabel}>giây</Text>
             </View>
 
             <TouchableOpacity

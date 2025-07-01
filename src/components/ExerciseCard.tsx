@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
   ActivityIndicator,
   Animated,
+  Image,
   Platform,
-  Vibration,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { Exercise } from '../types/gym.types';
 import { useGymStore } from '../store/gymStore';
+import { Exercise } from '../types/gym.types';
 
 interface ExerciseCardProps {
   exercise: Exercise;
@@ -24,7 +23,7 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   onPress,
   showFavorite = true,
 }) => {
-  const { favoriteExercises, toggleFavorite } = useGymStore();
+  const {favoriteExercises, toggleFavorite} = useGymStore();
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
   const scaleValue = useState(new Animated.Value(1))[0];
@@ -35,9 +34,7 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
     if (Platform.OS === 'ios') {
       // For iOS, we would use react-native-haptic-feedback
       // For now, use vibration as fallback
-      Vibration.vibrate(50);
     } else {
-      Vibration.vibrate(50);
     }
 
     // Animate heart
@@ -75,80 +72,95 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   };
 
   return (
-    <Animated.View style={[styles.container, { transform: [{ scale: scaleValue }] }]}>
+    <Animated.View
+      style={[styles.container, {transform: [{scale: scaleValue}]}]}>
       <TouchableOpacity onPress={handlePress}>
-      <View style={styles.imageContainer}>
-        <Image
-          source={{ uri: exercise.image }}
-          style={styles.image}
-          onLoadStart={() => setImageLoading(true)}
-          onLoadEnd={() => setImageLoading(false)}
-          onError={() => {
-            setImageLoading(false);
-            setImageError(true);
-          }}
-        />
-        {imageLoading && (
-          <View style={styles.imageLoader}>
-            <ActivityIndicator size="small" color="#FF6B6B" />
-          </View>
-        )}
-        {imageError && (
-          <View style={styles.imageError}>
-            <Text style={styles.imageErrorText}>🏋️</Text>
-          </View>
-        )}
-      </View>
-      
-      <View style={styles.content}>
-        <View style={styles.header}>
-          <Text style={styles.name}>{exercise.name}</Text>
-          {showFavorite && (
-            <TouchableOpacity onPress={handleFavoritePress} style={styles.favoriteButton}>
-              <Text style={[styles.favoriteIcon, { color: isFavorite ? '#FF6B6B' : '#ccc' }]}>
-                ♥
-              </Text>
-            </TouchableOpacity>
+        <View style={styles.imageContainer}>
+          <Image
+            source={{uri: exercise.image}}
+            style={styles.image}
+            onLoadStart={() => setImageLoading(true)}
+            onLoadEnd={() => setImageLoading(false)}
+            onError={() => {
+              setImageLoading(false);
+              setImageError(true);
+            }}
+          />
+          {imageLoading && (
+            <View style={styles.imageLoader}>
+              <ActivityIndicator size="small" color="#FF6B6B" />
+            </View>
+          )}
+          {imageError && (
+            <View style={styles.imageError}>
+              <Text style={styles.imageErrorText}>🏋️</Text>
+            </View>
           )}
         </View>
-        
-        <View style={styles.muscleGroup}>
-          <Text style={styles.muscleGroupIcon}>{exercise.muscleGroup.icon}</Text>
-          <Text style={styles.muscleGroupName}>{exercise.muscleGroup.name}</Text>
-        </View>
-        
-        <Text style={styles.description} numberOfLines={2}>
-          {exercise.description}
-        </Text>
-        
-        <View style={styles.details}>
-          <View style={styles.detailItem}>
-            <Text style={styles.detailLabel}>Sets:</Text>
-            <Text style={styles.detailValue}>{exercise.sets}</Text>
+
+        <View style={styles.content}>
+          <View style={styles.header}>
+            <Text style={styles.name}>{exercise.name}</Text>
+            {showFavorite && (
+              <TouchableOpacity
+                onPress={handleFavoritePress}
+                style={styles.favoriteButton}>
+                <Text
+                  style={[
+                    styles.favoriteIcon,
+                    {color: isFavorite ? '#FF6B6B' : '#ccc'},
+                  ]}>
+                  ♥
+                </Text>
+              </TouchableOpacity>
+            )}
           </View>
-          <View style={styles.detailItem}>
-            <Text style={styles.detailLabel}>Reps:</Text>
-            <Text style={styles.detailValue}>{exercise.reps}</Text>
+
+          <View style={styles.muscleGroup}>
+            <Text style={styles.muscleGroupIcon}>
+              {exercise.muscleGroup.icon}
+            </Text>
+            <Text style={styles.muscleGroupName}>
+              {exercise.muscleGroup.name}
+            </Text>
           </View>
-          <View style={styles.detailItem}>
-            <Text style={styles.detailLabel}>Nghỉ:</Text>
-            <Text style={styles.detailValue}>{exercise.restTime}s</Text>
-          </View>
-        </View>
-        
-        <View style={styles.difficulty}>
-          <Text style={[
-            styles.difficultyText,
-            {
-              backgroundColor: 
-                exercise.difficulty === 'Beginner' ? '#4CAF50' :
-                exercise.difficulty === 'Intermediate' ? '#FF9800' : '#F44336'
-            }
-          ]}>
-            {exercise.difficulty}
+
+          <Text style={styles.description} numberOfLines={2}>
+            {exercise.description}
           </Text>
+
+          <View style={styles.details}>
+            <View style={styles.detailItem}>
+              <Text style={styles.detailLabel}>Sets:</Text>
+              <Text style={styles.detailValue}>{exercise.sets}</Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Text style={styles.detailLabel}>Reps:</Text>
+              <Text style={styles.detailValue}>{exercise.reps}</Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Text style={styles.detailLabel}>Nghỉ:</Text>
+              <Text style={styles.detailValue}>{exercise.restTime}s</Text>
+            </View>
+          </View>
+
+          <View style={styles.difficulty}>
+            <Text
+              style={[
+                styles.difficultyText,
+                {
+                  backgroundColor:
+                    exercise.difficulty === 'Beginner'
+                      ? '#4CAF50'
+                      : exercise.difficulty === 'Intermediate'
+                      ? '#FF9800'
+                      : '#F44336',
+                },
+              ]}>
+              {exercise.difficulty}
+            </Text>
+          </View>
         </View>
-      </View>
       </TouchableOpacity>
     </Animated.View>
   );

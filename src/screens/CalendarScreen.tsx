@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -9,8 +9,8 @@ import {
   Modal,
   Alert,
 } from 'react-native';
-import { useGymStore } from '../store/gymStore';
-import { CalendarWorkout } from '../types/gym.types';
+import {useGymStore} from '../store/gymStore';
+import {CalendarWorkout} from '../types/gym.types';
 
 export const CalendarScreen: React.FC = () => {
   const {
@@ -29,20 +29,20 @@ export const CalendarScreen: React.FC = () => {
   const generateCalendarDays = () => {
     const year = currentMonth.getFullYear();
     const month = currentMonth.getMonth();
-    
+
     const firstDay = new Date(year, month, 1);
     const lastDay = new Date(year, month + 1, 0);
     const startDate = new Date(firstDay);
     startDate.setDate(startDate.getDate() - firstDay.getDay());
-    
+
     const days = [];
     const currentDate = new Date(startDate);
-    
+
     for (let i = 0; i < 42; i++) {
       days.push(new Date(currentDate));
       currentDate.setDate(currentDate.getDate() + 1);
     }
-    
+
     return days;
   };
 
@@ -78,10 +78,12 @@ export const CalendarScreen: React.FC = () => {
 
   const handleMarkCompleted = () => {
     if (!selectedDate) return;
-    
+
     const existingWorkout = getWorkoutByDate(selectedDate);
     if (existingWorkout) {
-      updateCalendarWorkout(selectedDate, { completed: !existingWorkout.completed });
+      updateCalendarWorkout(selectedDate, {
+        completed: !existingWorkout.completed,
+      });
     } else {
       // Create a simple workout for today
       const newWorkout: CalendarWorkout = {
@@ -92,7 +94,7 @@ export const CalendarScreen: React.FC = () => {
       };
       addCalendarWorkout(newWorkout);
     }
-    
+
     setShowWorkoutModal(false);
     Alert.alert('Thành công', 'Đã cập nhật trạng thái tập luyện!');
   };
@@ -116,29 +118,29 @@ export const CalendarScreen: React.FC = () => {
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.title}>📅 Lịch tập luyện</Text>
-          <Text style={styles.subtitle}>Theo dõi và lên kế hoạch tập luyện</Text>
+          <Text style={styles.subtitle}>
+            Theo dõi và lên kế hoạch tập luyện
+          </Text>
         </View>
 
         {/* Calendar Navigation */}
         <View style={styles.calendarHeader}>
           <TouchableOpacity
             style={styles.navButton}
-            onPress={() => navigateMonth('prev')}
-          >
+            onPress={() => navigateMonth('prev')}>
             <Text style={styles.navButtonText}>‹</Text>
           </TouchableOpacity>
-          
+
           <Text style={styles.monthYear}>
-            {currentMonth.toLocaleDateString('vi-VN', { 
-              month: 'long', 
-              year: 'numeric' 
+            {currentMonth.toLocaleDateString('vi-VN', {
+              month: 'long',
+              year: 'numeric',
             })}
           </Text>
-          
+
           <TouchableOpacity
             style={styles.navButton}
-            onPress={() => navigateMonth('next')}
-          >
+            onPress={() => navigateMonth('next')}>
             <Text style={styles.navButtonText}>›</Text>
           </TouchableOpacity>
         </View>
@@ -147,8 +149,10 @@ export const CalendarScreen: React.FC = () => {
         <View style={styles.calendar}>
           {/* Week Days Header */}
           <View style={styles.weekDaysHeader}>
-            {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((day) => (
-              <Text key={day} style={styles.weekDayText}>{day}</Text>
+            {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map(day => (
+              <Text key={day} style={styles.weekDayText}>
+                {day}
+              </Text>
             ))}
           </View>
 
@@ -171,22 +175,24 @@ export const CalendarScreen: React.FC = () => {
                     hasWorkoutDay && styles.workoutDay,
                     isCompleted && styles.completedDay,
                   ]}
-                  onPress={() => handleDatePress(date)}
-                >
-                  <Text style={[
-                    styles.calendarDayText,
-                    !isCurrentMonthDay && styles.otherMonthText,
-                    isTodayDate && styles.todayText,
-                    hasWorkoutDay && styles.workoutText,
-                    isCompleted && styles.completedText,
-                  ]}>
+                  onPress={() => handleDatePress(date)}>
+                  <Text
+                    style={[
+                      styles.calendarDayText,
+                      !isCurrentMonthDay && styles.otherMonthText,
+                      isTodayDate && styles.todayText,
+                      hasWorkoutDay && styles.workoutText,
+                      isCompleted && styles.completedText,
+                    ]}>
                     {date.getDate()}
                   </Text>
                   {hasWorkoutDay && (
-                    <View style={[
-                      styles.workoutIndicator,
-                      isCompleted && styles.completedIndicator
-                    ]} />
+                    <View
+                      style={[
+                        styles.workoutIndicator,
+                        isCompleted && styles.completedIndicator,
+                      ]}
+                    />
                   )}
                 </TouchableOpacity>
               );
@@ -197,15 +203,15 @@ export const CalendarScreen: React.FC = () => {
         {/* Legend */}
         <View style={styles.legend}>
           <View style={styles.legendItem}>
-            <View style={[styles.legendDot, { backgroundColor: '#2196F3' }]} />
+            <View style={[styles.legendDot, {backgroundColor: '#2196F3'}]} />
             <Text style={styles.legendText}>Hôm nay</Text>
           </View>
           <View style={styles.legendItem}>
-            <View style={[styles.legendDot, { backgroundColor: '#FF9800' }]} />
+            <View style={[styles.legendDot, {backgroundColor: '#FF9800'}]} />
             <Text style={styles.legendText}>Có lịch tập</Text>
           </View>
           <View style={styles.legendItem}>
-            <View style={[styles.legendDot, { backgroundColor: '#4CAF50' }]} />
+            <View style={[styles.legendDot, {backgroundColor: '#4CAF50'}]} />
             <Text style={styles.legendText}>Đã hoàn thành</Text>
           </View>
         </View>
@@ -216,17 +222,24 @@ export const CalendarScreen: React.FC = () => {
           <View style={styles.statsGrid}>
             <View style={styles.statCard}>
               <Text style={styles.statNumber}>
-                {calendarWorkouts.filter(w => 
-                  w.date.startsWith(currentMonth.toISOString().slice(0, 7))
-                ).length}
+                {
+                  calendarWorkouts.filter(w =>
+                    w.date.startsWith(currentMonth.toISOString().slice(0, 7)),
+                  ).length
+                }
               </Text>
               <Text style={styles.statLabel}>Ngày có lịch</Text>
             </View>
             <View style={styles.statCard}>
               <Text style={styles.statNumber}>
-                {calendarWorkouts.filter(w => 
-                  w.date.startsWith(currentMonth.toISOString().slice(0, 7)) && w.completed
-                ).length}
+                {
+                  calendarWorkouts.filter(
+                    w =>
+                      w.date.startsWith(
+                        currentMonth.toISOString().slice(0, 7),
+                      ) && w.completed,
+                  ).length
+                }
               </Text>
               <Text style={styles.statLabel}>Đã hoàn thành</Text>
             </View>
@@ -239,40 +252,49 @@ export const CalendarScreen: React.FC = () => {
         visible={showWorkoutModal}
         animationType="slide"
         transparent={true}
-        onRequestClose={() => setShowWorkoutModal(false)}
-      >
+        onRequestClose={() => setShowWorkoutModal(false)}>
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>
-              {selectedDate && new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN')}
+              {selectedDate &&
+                new Date(selectedDate + 'T00:00:00').toLocaleDateString(
+                  'vi-VN',
+                )}
             </Text>
-            
+
             {selectedWorkout ? (
               <View style={styles.workoutInfo}>
                 <Text style={styles.workoutStatus}>
-                  Trạng thái: {selectedWorkout.completed ? '✅ Đã hoàn thành' : '⏳ Chưa hoàn thành'}
+                  Trạng thái:{' '}
+                  {selectedWorkout.completed
+                    ? '✅ Đã hoàn thành'
+                    : '⏳ Chưa hoàn thành'}
                 </Text>
                 {selectedWorkout.notes && (
-                  <Text style={styles.workoutNotes}>{selectedWorkout.notes}</Text>
+                  <Text style={styles.workoutNotes}>
+                    {selectedWorkout.notes}
+                  </Text>
                 )}
               </View>
             ) : (
-              <Text style={styles.noWorkoutText}>Chưa có lịch tập cho ngày này</Text>
+              <Text style={styles.noWorkoutText}>
+                Chưa có lịch tập cho ngày này
+              </Text>
             )}
 
             <View style={styles.modalButtons}>
               <TouchableOpacity
                 style={[styles.modalButton, styles.cancelButton]}
-                onPress={() => setShowWorkoutModal(false)}
-              >
+                onPress={() => setShowWorkoutModal(false)}>
                 <Text style={styles.cancelButtonText}>Đóng</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={[styles.modalButton, styles.completeButton]}
-                onPress={handleMarkCompleted}
-              >
+                onPress={handleMarkCompleted}>
                 <Text style={styles.completeButtonText}>
-                  {selectedWorkout?.completed ? 'Bỏ hoàn thành' : 'Đánh dấu hoàn thành'}
+                  {selectedWorkout?.completed
+                    ? 'Bỏ hoàn thành'
+                    : 'Đánh dấu hoàn thành'}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -317,7 +339,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -339,7 +361,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 16,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -437,7 +459,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 20,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -518,6 +540,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',
+    justifyContent: 'center',
     marginHorizontal: 6,
   },
   cancelButton: {
@@ -535,5 +558,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
