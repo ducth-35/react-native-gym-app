@@ -13,14 +13,32 @@ import { useGymStore } from '../store/gymStore';
 import { useTimerStore } from '../store/timerStore';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { APP_SCREEN } from '../navigators/screen-type';
+import FastImage from 'react-native-fast-image';
 
 const { width } = Dimensions.get('window');
+
+const imageMap: Record<string, any> = {
+  'push_up.gif': require('../assets/images/push_up.gif'),
+  'pull_up.gif': require('../assets/images/pull_up.gif'),
+  'squat.gif': require('../assets/images/squat.gif'),
+  'plank.gif': require('../assets/images/plank.gif'),
+  'shoulder_press.gif': require('../assets/images/shoulder_press.gif'),
+  'bicep_curl.gif': require('../assets/images/bicep_curl.gif'),
+  'burpee.gif': require('../assets/images/burpee.gif'),
+  'deadlift.gif': require('../assets/images/deadlift.gif'),
+  'bench_press.gif': require('../assets/images/bench_press.gif'),
+  'mountain_climber.gif': require('../assets/images/mountain_climber.gif'),
+  'bodyweight_lunges.gif': require('../assets/images/bodyweight_lunges.gif'),
+  'dips.gif': require('../assets/images/dips.gif'),
+  'russian_twist.gif': require('../assets/images/russian_twist.gif'),
+};
+
 
 export const ExerciseDetailScreen: React.FC = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const { exerciseId } = (route.params as any) || {};
-  
+
   const { exercises, favoriteExercises, toggleFavorite, initializeData } = useGymStore();
   const { startRestTimer } = useTimerStore();
 
@@ -29,7 +47,7 @@ export const ExerciseDetailScreen: React.FC = () => {
   }, [initializeData]);
 
   const exercise = exercises.find(ex => ex.id === exerciseId);
-  const isFavorite = favoriteExercises.includes(exerciseId);
+  // const isFavorite = favoriteExercises.includes(exerciseId);
 
   if (!exercise) {
     return (
@@ -52,17 +70,9 @@ export const ExerciseDetailScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Header Image */}
         <View style={styles.imageContainer}>
-          <Image source={{ uri: exercise.image }} style={styles.image} />
-          <TouchableOpacity 
-            style={styles.favoriteButton}
-            onPress={() => toggleFavorite(exercise.id)}
-          >
-            <Text style={[styles.favoriteIcon, { color: isFavorite ? '#FF6B6B' : '#fff' }]}>
-              ♥
-            </Text>
-          </TouchableOpacity>
+          <View style={{ width: 100, height: 40, backgroundColor: '#fff', left: 70, position: 'absolute', zIndex: 1 }} />
+          <FastImage source={imageMap[exercise.image]} style={styles.image} resizeMode='contain' />
         </View>
 
         <View style={styles.content}>
@@ -93,9 +103,9 @@ export const ExerciseDetailScreen: React.FC = () => {
               <Text style={[
                 styles.statValue,
                 {
-                  color: 
+                  color:
                     exercise.difficulty === 'Beginner' ? '#4CAF50' :
-                    exercise.difficulty === 'Intermediate' ? '#FF9800' : '#F44336'
+                      exercise.difficulty === 'Intermediate' ? '#FF9800' : '#F44336'
                 }
               ]}>
                 {exercise.difficulty}
@@ -165,7 +175,7 @@ export const ExerciseDetailScreen: React.FC = () => {
 
           {/* Action Buttons */}
           <View style={styles.actionButtons}>
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.timerButton}
               onPress={handleStartRestTimer}
             >
@@ -181,14 +191,14 @@ export const ExerciseDetailScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#fff',
   },
   imageContainer: {
     position: 'relative',
   },
   image: {
     width: width,
-    height: 250,
+    height: 250
   },
   favoriteButton: {
     position: 'absolute',
@@ -206,8 +216,6 @@ const styles = StyleSheet.create({
   },
   content: {
     backgroundColor: '#fff',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
     marginTop: -20,
     paddingTop: 20,
     paddingHorizontal: 20,

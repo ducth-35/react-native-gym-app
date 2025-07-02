@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -13,18 +13,37 @@ import { ExerciseCard } from '../components/ExerciseCard';
 import { MuscleGroupCard } from '../components/MuscleGroupCard';
 import { useNavigation } from '@react-navigation/native';
 import { APP_SCREEN } from '../navigators/screen-type';
+import TextApp from '../components/textApp';
 
 const { width } = Dimensions.get('window');
 
 export const HomeScreen: React.FC = () => {
   const navigation = useNavigation();
-  const { 
-    exercises, 
-    muscleGroups, 
+  const {
+    exercises,
+    muscleGroups,
     initializeData,
     favoriteExercises,
-    workoutSessions 
+    workoutSessions
   } = useGymStore();
+  const [greeting, setGreeting] = useState<string>('');
+
+  useEffect(() => {
+    const hour = new Date().getHours();
+
+    let greet = '';
+    if (hour >= 5 && hour < 11) {
+      greet = 'Chào buổi sáng';
+    } else if (hour >= 11 && hour < 13) {
+      greet = 'Chào buổi trưa';
+    } else if (hour >= 13 && hour < 18) {
+      greet = 'Chào buổi chiều';
+    } else {
+      greet = 'Chào buổi tối';
+    }
+
+    setGreeting(greet);
+  }, []);
 
   useEffect(() => {
     initializeData();
@@ -56,35 +75,35 @@ export const HomeScreen: React.FC = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.greeting}>Chào bạn! 👋</Text>
-          <Text style={styles.subtitle}>Sẵn sàng tập luyện hôm nay?</Text>
+          <TextApp style={styles.greeting}>👋 {greeting}!</TextApp>
+          <TextApp style={styles.subtitle}>Sẵn sàng tập luyện hôm nay?</TextApp>
         </View>
 
         {/* Quick Stats */}
         <View style={styles.statsContainer}>
           <View style={styles.statCard}>
-            <Text style={styles.statNumber}>{exercises.length}</Text>
-            <Text style={styles.statLabel}>Bài tập</Text>
+            <TextApp style={styles.statNumber}>{exercises.length}</TextApp>
+            <TextApp style={styles.statLabel}>Bài tập</TextApp>
           </View>
           <View style={styles.statCard}>
-            <Text style={styles.statNumber}>{favoriteExercises.length}</Text>
-            <Text style={styles.statLabel}>Yêu thích</Text>
+            <TextApp style={styles.statNumber}>{favoriteExercises.length}</TextApp>
+            <TextApp style={styles.statLabel}>Yêu thích</TextApp>
           </View>
           <View style={styles.statCard}>
-            <Text style={styles.statNumber}>{workoutSessions.length}</Text>
-            <Text style={styles.statLabel}>Buổi tập</Text>
+            <TextApp style={styles.statNumber}>{workoutSessions.length}</TextApp>
+            <TextApp style={styles.statLabel}>Buổi tập</TextApp>
           </View>
         </View>
 
         {/* Today's Suggestions */}
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>💡 Gợi ý hôm nay</Text>
+            <TextApp style={styles.sectionTitle}>Gợi ý hôm nay</TextApp>
             <TouchableOpacity onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_LIST as never)}>
-              <Text style={styles.seeAllText}>Xem tất cả</Text>
+              <TextApp style={styles.seeAllText}>Xem tất cả</TextApp>
             </TouchableOpacity>
           </View>
-          
+
           {todaysSuggestions.map((exercise) => (
             <ExerciseCard
               key={exercise.id}
@@ -97,12 +116,12 @@ export const HomeScreen: React.FC = () => {
         {/* Muscle Groups */}
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>🎯 Nhóm cơ</Text>
+            <TextApp style={styles.sectionTitle}>Nhóm cơ</TextApp>
             <TouchableOpacity onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_LIST as never)}>
-              <Text style={styles.seeAllText}>Xem tất cả</Text>
+              <TextApp style={styles.seeAllText}>Xem tất cả</TextApp>
             </TouchableOpacity>
           </View>
-          
+
           <View style={styles.muscleGroupsContainer}>
             {muscleGroups.slice(0, 6).map((muscleGroup) => (
               <MuscleGroupCard
@@ -117,59 +136,59 @@ export const HomeScreen: React.FC = () => {
 
         {/* Quick Actions */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>⚡ Thao tác nhanh</Text>
+          <TextApp style={[styles.sectionTitle, { marginHorizontal: 24, marginBottom: 4 }]}>Thao tác nhanh</TextApp>
           <View style={styles.quickActionsContainer}>
-            <TouchableOpacity 
+            <TouchableOpacity
               style={[styles.quickActionButton, { backgroundColor: '#4CAF50' }]}
               onPress={() => navigation.navigate(APP_SCREEN.TIMER as never)}
             >
-              <Text style={styles.quickActionIcon}>⏱️</Text>
-              <Text style={styles.quickActionText}>Hẹn giờ</Text>
+              <TextApp style={styles.quickActionIcon}>⏱️</TextApp>
+              <TextApp style={styles.quickActionText}>Hẹn giờ</TextApp>
             </TouchableOpacity>
-            
-            <TouchableOpacity 
+
+            <TouchableOpacity
               style={[styles.quickActionButton, { backgroundColor: '#2196F3' }]}
               onPress={() => navigation.navigate(APP_SCREEN.WORKOUT_PLANS as never)}
             >
-              <Text style={styles.quickActionIcon}>📋</Text>
-              <Text style={styles.quickActionText}>Lộ trình</Text>
+              <TextApp style={styles.quickActionIcon}>📋</TextApp>
+              <TextApp style={styles.quickActionText}>Lộ trình</TextApp>
             </TouchableOpacity>
-            
-            <TouchableOpacity 
+
+            <TouchableOpacity
               style={[styles.quickActionButton, { backgroundColor: '#FF9800' }]}
               onPress={() => navigation.navigate(APP_SCREEN.CALENDAR as never)}
             >
-              <Text style={styles.quickActionIcon}>📅</Text>
-              <Text style={styles.quickActionText}>Lịch tập</Text>
+              <TextApp style={styles.quickActionIcon}>📅</TextApp>
+              <TextApp style={styles.quickActionText}>Lịch tập</TextApp>
             </TouchableOpacity>
-            
-            <TouchableOpacity 
+
+            <TouchableOpacity
               style={[styles.quickActionButton, { backgroundColor: '#9C27B0' }]}
               onPress={() => navigation.navigate(APP_SCREEN.PROGRESS as never)}
             >
-              <Text style={styles.quickActionIcon}>📊</Text>
-              <Text style={styles.quickActionText}>Tiến trình</Text>
+              <TextApp style={styles.quickActionIcon}>📊</TextApp>
+              <TextApp style={styles.quickActionText}>Tiến trình</TextApp>
             </TouchableOpacity>
           </View>
         </View>
 
         {/* Recent Sessions */}
-        {recentSessions.length > 0 && (
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>📈 Buổi tập gần đây</Text>
-            {recentSessions.map((session) => (
-              <View key={session.id} style={styles.sessionCard}>
-                <Text style={styles.sessionDate}>
-                  {new Date(session.date).toLocaleDateString('vi-VN')}
-                </Text>
-                <Text style={styles.sessionDuration}>{session.duration} phút</Text>
-                <Text style={styles.sessionExercises}>
-                  {session.exercises.length} bài tập
-                </Text>
-              </View>
-            ))}
-          </View>
-        )}
+        {/* {recentSessions.length > 0 && ( */}
+        <View style={styles.section}>
+          <TextApp style={[styles.sectionTitle, { marginHorizontal: 24, marginBottom: 4 }]}>Buổi tập gần đây</TextApp>
+          {recentSessions.map((session) => (
+            <View key={session.id} style={styles.sessionCard}>
+              <TextApp style={styles.sessionDate}>
+                {new Date(session.date).toLocaleDateString('vi-VN')}
+              </TextApp>
+              <TextApp style={styles.sessionDuration}>{session.duration} phút</TextApp>
+              <TextApp style={styles.sessionExercises}>
+                {session.exercises.length} bài tập
+              </TextApp>
+            </View>
+          ))}
+        </View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -230,7 +249,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 20,
-    marginBottom: 16,
   },
   sectionTitle: {
     fontSize: 20,

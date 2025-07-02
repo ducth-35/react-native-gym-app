@@ -20,7 +20,7 @@
     "restTime": 60,
     "difficulty": "Beginner",
     "equipment": [],
-    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop&q=80",
+    "image": "push_up.gif",
     "tips": [
       "Giữ cơ thể thẳng như một đường thẳng",
       "Không để hông quá cao hoặc quá thấp",
@@ -54,7 +54,7 @@
     "restTime": 90,
     "difficulty": "Intermediate",
     "equipment": ["Xà đơn"],
-    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=500&h=300&fit=crop&q=80",
+    "image": "pull_up.gif",
     "tips": [
       "Bắt đầu từ vị trí treo hoàn toàn",
       "Kéo bằng cơ lưng, không chỉ bằng tay",
@@ -88,7 +88,7 @@
     "restTime": 60,
     "difficulty": "Beginner",
     "equipment": [],
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=300&fit=crop&q=80",
+    "image": "squat.gif",
     "tips": [
       "Giữ trọng lượng ở gót chân",
       "Đẩy đầu gối ra ngoài",
@@ -122,7 +122,7 @@
     "restTime": 45,
     "difficulty": "Beginner",
     "equipment": [],
-    "image": "https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?w=500&h=300&fit=crop&q=80",
+    "image": "plank.gif",
     "tips": [
       "Không để hông quá cao hoặc quá thấp",
       "Thở đều trong suốt bài tập",
@@ -156,7 +156,7 @@
     "restTime": 75,
     "difficulty": "Intermediate",
     "equipment": ["Tạ đơn"],
-    "image": "https://images.unsplash.com/photo-1583500178690-f7fd39d8ba39?w=500&h=300&fit=crop&q=80",
+    "image": "shoulder_press.gif",
     "tips": [
       "Giữ lưng thẳng",
       "Không khóa hoàn toàn khuỷu tay",
@@ -190,7 +190,7 @@
     "restTime": 60,
     "difficulty": "Beginner",
     "equipment": ["Tạ đơn"],
-    "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=500&h=300&fit=crop&q=80",
+    "image": "bicep_curl.gif",
     "tips": [
       "Giữ khuỷu tay sát cơ thể",
       "Không sử dụng động lực",
@@ -224,7 +224,7 @@
     "restTime": 90,
     "difficulty": "Advanced",
     "equipment": [],
-    "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=500&h=300&fit=crop&q=80",
+    "image": "burpee.gif",
     "tips": [
       "Giữ nhịp độ ổn định",
       "Tập trung vào kỹ thuật",
@@ -258,7 +258,7 @@
     "restTime": 120,
     "difficulty": "Advanced",
     "equipment": ["Thanh tạ", "Tạ đĩa"],
-    "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=500&h=300&fit=crop&q=80",
+    "image": "deadlift.gif",
     "tips": [
       "Giữ thanh tạ sát cơ thể",
       "Không cong lưng",
@@ -292,7 +292,7 @@
     "restTime": 90,
     "difficulty": "Intermediate",
     "equipment": ["Ghế bench", "Thanh tạ", "Tạ đĩa"],
-    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop&q=80",
+    "image": "bench_press.gif",
     "tips": [
       "Giữ vai chặt vào ghế",
       "Kiểm soát tốc độ hạ xuống",
@@ -326,7 +326,7 @@
     "restTime": 45,
     "difficulty": "Intermediate",
     "equipment": [],
-    "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop&q=80",
+    "image": "mountain_climber.gif",
     "tips": [
       "Giữ hông ổn định",
       "Tăng tốc độ dần dần",
@@ -360,7 +360,7 @@
     "restTime": 60,
     "difficulty": "Beginner",
     "equipment": [],
-    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop&q=80",
+    "image": "bodyweight_lunges.gif",
     "tips": [
       "Giữ thân người thẳng",
       "Đầu gối trước không vượt qua mũi chân",
@@ -394,7 +394,7 @@
     "restTime": 75,
     "difficulty": "Intermediate",
     "equipment": ["Thanh song song hoặc ghế"],
-    "image": "https://images.unsplash.com/photo-1583500178690-f7fd39d8ba39?w=500&h=300&fit=crop&q=80",
+    "image": "dips.gif",
     "tips": [
       "Giữ cơ thể thẳng",
       "Không hạ quá thấp",
@@ -428,7 +428,7 @@
     "restTime": 45,
     "difficulty": "Intermediate",
     "equipment": [],
-    "image": "https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?w=500&h=300&fit=crop&q=80",
+    "image": "russian_twist.gif",
     "tips": [
       "Giữ chân nâng cao",
       "Xoay từ thân người, không chỉ tay",

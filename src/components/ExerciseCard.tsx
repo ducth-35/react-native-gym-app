@@ -4,9 +4,9 @@ import {
   Animated,
   Image,
   Platform,
+  Pressable,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import { useGymStore } from '../store/gymStore';
@@ -23,36 +23,32 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   onPress,
   showFavorite = true,
 }) => {
-  const {favoriteExercises, toggleFavorite} = useGymStore();
-  const [imageLoading, setImageLoading] = useState(true);
-  const [imageError, setImageError] = useState(false);
   const scaleValue = useState(new Animated.Value(1))[0];
-  const isFavorite = favoriteExercises.includes(exercise.id);
 
-  const handleFavoritePress = () => {
-    // Haptic feedback
-    if (Platform.OS === 'ios') {
-      // For iOS, we would use react-native-haptic-feedback
-      // For now, use vibration as fallback
-    } else {
-    }
+  // const handleFavoritePress = () => {
+  //   // Haptic feedback
+  //   if (Platform.OS === 'ios') {
+  //     // For iOS, we would use react-native-haptic-feedback
+  //     // For now, use vibration as fallback
+  //   } else {
+  //   }
 
-    // Animate heart
-    Animated.sequence([
-      Animated.timing(scaleValue, {
-        toValue: 1.2,
-        duration: 100,
-        useNativeDriver: true,
-      }),
-      Animated.timing(scaleValue, {
-        toValue: 1,
-        duration: 100,
-        useNativeDriver: true,
-      }),
-    ]).start();
+  //   // Animate heart
+  //   Animated.sequence([
+  //     Animated.timing(scaleValue, {
+  //       toValue: 1.2,
+  //       duration: 100,
+  //       useNativeDriver: true,
+  //     }),
+  //     Animated.timing(scaleValue, {
+  //       toValue: 1,
+  //       duration: 100,
+  //       useNativeDriver: true,
+  //     }),
+  //   ]).start();
 
-    toggleFavorite(exercise.id);
-  };
+  //   toggleFavorite(exercise.id);
+  // };
 
   const handlePress = () => {
     Animated.sequence([
@@ -71,51 +67,37 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
     });
   };
 
+  const imageMap: Record<string, any> = {
+    'push_up.gif': require('../assets/images/push_up.gif'),
+    'pull_up.gif': require('../assets/images/pull_up.gif'),
+    'squat.gif': require('../assets/images/squat.gif'),
+    'plank.gif': require('../assets/images/plank.gif'),
+    'shoulder_press.gif': require('../assets/images/shoulder_press.gif'),
+    'bicep_curl.gif': require('../assets/images/bicep_curl.gif'),
+    'burpee.gif': require('../assets/images/burpee.gif'),
+    'deadlift.gif': require('../assets/images/deadlift.gif'),
+    'bench_press.gif': require('../assets/images/bench_press.gif'),
+    'mountain_climber.gif': require('../assets/images/mountain_climber.gif'),
+    'bodyweight_lunges.gif': require('../assets/images/bodyweight_lunges.gif'),
+    'dips.gif': require('../assets/images/dips.gif'),
+    'russian_twist.gif': require('../assets/images/russian_twist.gif'),
+  };
+
+
   return (
     <Animated.View
-      style={[styles.container, {transform: [{scale: scaleValue}]}]}>
-      <TouchableOpacity onPress={handlePress}>
+      style={[styles.container, { transform: [{ scale: scaleValue }] }]}>
+      <Pressable onPress={handlePress}>
         <View style={styles.imageContainer}>
+          <View style={{ width: 80, height: 30, backgroundColor: '#fff', left: 80, position: 'absolute', zIndex: 1 }} />
           <Image
-            source={{uri: exercise.image}}
+            source={imageMap[exercise.image]}
             style={styles.image}
-            onLoadStart={() => setImageLoading(true)}
-            onLoadEnd={() => setImageLoading(false)}
-            onError={() => {
-              setImageLoading(false);
-              setImageError(true);
-            }}
+            resizeMode='contain'
           />
-          {imageLoading && (
-            <View style={styles.imageLoader}>
-              <ActivityIndicator size="small" color="#FF6B6B" />
-            </View>
-          )}
-          {imageError && (
-            <View style={styles.imageError}>
-              <Text style={styles.imageErrorText}>🏋️</Text>
-            </View>
-          )}
         </View>
 
         <View style={styles.content}>
-          <View style={styles.header}>
-            <Text style={styles.name}>{exercise.name}</Text>
-            {showFavorite && (
-              <TouchableOpacity
-                onPress={handleFavoritePress}
-                style={styles.favoriteButton}>
-                <Text
-                  style={[
-                    styles.favoriteIcon,
-                    {color: isFavorite ? '#FF6B6B' : '#ccc'},
-                  ]}>
-                  ♥
-                </Text>
-              </TouchableOpacity>
-            )}
-          </View>
-
           <View style={styles.muscleGroup}>
             <Text style={styles.muscleGroupIcon}>
               {exercise.muscleGroup.icon}
@@ -153,15 +135,15 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
                     exercise.difficulty === 'Beginner'
                       ? '#4CAF50'
                       : exercise.difficulty === 'Intermediate'
-                      ? '#FF9800'
-                      : '#F44336',
+                        ? '#FF9800'
+                        : '#F44336',
                 },
               ]}>
               {exercise.difficulty}
             </Text>
           </View>
         </View>
-      </TouchableOpacity>
+      </Pressable>
     </Animated.View>
   );
 };
@@ -180,15 +162,16 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
+    overflow:'hidden'
   },
   imageContainer: {
     position: 'relative',
     width: '100%',
-    height: 150,
+    height: 160,
   },
   image: {
     width: '100%',
-    height: 150,
+    height: 180,
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
   },

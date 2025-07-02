@@ -1,14 +1,10 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {APP_SCREEN, TabParamList} from './screen-type';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {HomeScreen} from '../screens/HomeScreen';
-import {ExerciseListScreen} from '../screens/ExerciseListScreen';
-import {SearchScreen} from '../screens/SearchScreen';
-import {FavoritesScreen} from '../screens/FavoritesScreen';
-import {TimerScreen} from '../screens/TimerScreen';
-import {WorkoutPlansScreen} from '../screens/WorkoutPlansScreen';
-import {CalendarScreen} from '../screens/CalendarScreen';
-import {ProgressScreen} from '../screens/ProgressScreen';
+import { ExerciseListScreen } from '../screens/ExerciseListScreen';
+import { HomeScreen } from '../screens/HomeScreen';
+import { SearchScreen } from '../screens/SearchScreen';
+import { TimerScreen } from '../screens/TimerScreen';
+import { APP_SCREEN, TabParamList } from './screen-type';
 
 const TABS = [
   {
@@ -28,12 +24,6 @@ const TABS = [
     component: SearchScreen,
     label: 'Tìm kiếm',
     icon: 'search',
-  },
-  {
-    name: APP_SCREEN.FAVORITES,
-    component: FavoritesScreen,
-    label: 'Yêu thích',
-    icon: 'heart',
   },
   {
     name: APP_SCREEN.TIMER,

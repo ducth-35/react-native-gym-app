@@ -75,6 +75,7 @@ export const TimerScreen: React.FC = () => {
           <Text style={styles.sectionTitle}>Hẹn giờ tùy chỉnh</Text>
           <View style={styles.customTimerContainer}>
             <View style={styles.timeInputContainer}>
+              <Text style={{marginRight:4}}>Phút</Text>
               <TextInput
                 style={styles.timeInput}
                 placeholder="0"
@@ -88,6 +89,7 @@ export const TimerScreen: React.FC = () => {
             <Text style={styles.timeSeparator}>:</Text>
 
             <View style={styles.timeInputContainer}>
+                <Text style={{marginRight:4}}>Giây</Text>
               <TextInput
                 style={styles.timeInput}
                 placeholder="0"
@@ -194,6 +196,7 @@ const styles = StyleSheet.create({
   },
   timeInputContainer: {
     alignItems: 'center',
+    flexDirection:"row"
   },
   timeInput: {
     borderWidth: 2,

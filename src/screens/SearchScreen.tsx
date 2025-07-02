@@ -107,7 +107,7 @@ export const SearchScreen: React.FC = () => {
 
         {/* Muscle Groups Quick Search */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>🎯 Tìm theo nhóm cơ</Text>
+          <Text style={styles.sectionTitle}>Tìm theo nhóm cơ</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {muscleGroups.map((muscleGroup) => (
               <TouchableOpacity
