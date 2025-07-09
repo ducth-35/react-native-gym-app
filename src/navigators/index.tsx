@@ -9,18 +9,18 @@ import {WorkoutPlanDetailScreen} from '../screens/WorkoutPlanDetailScreen';
 import {CreateWorkoutPlanScreen} from '../screens/CreateWorkoutPlanScreen';
 import {CalendarScreen} from '../screens/CalendarScreen';
 import {ProgressScreen} from '../screens/ProgressScreen';
+import {navigationRef} from './navigation-services';
 
 export const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export const Navigations: React.FC = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
         initialRouteName={APP_SCREEN.TAB_SCREEN}
         screenOptions={{
           headerShown: false,
-        }}
-      >
+        }}>
         <Stack.Screen name={APP_SCREEN.TAB_SCREEN} component={TabNavigator} />
         <Stack.Screen
           name={APP_SCREEN.EXERCISE_DETAIL}

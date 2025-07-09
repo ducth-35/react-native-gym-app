@@ -453,7 +453,8 @@ const styles = StyleSheet.create({
   },
   difficultyButton: {
     flex: 1,
-    padding: 12,
+    paddingHorizontal: 10,
+    paddingVertical: 12,
     borderRadius: 8,
     backgroundColor: '#f8f9fa',
     alignItems: 'center',
