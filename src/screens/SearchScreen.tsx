@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,12 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import { useGymStore } from '../store/gymStore';
-import { ExerciseCard } from '../components/ExerciseCard';
-import { useNavigation } from '@react-navigation/native';
-import { APP_SCREEN } from '../navigators/screen-type';
+import {useGymStore} from '../store/gymStore';
+import {ExerciseCard} from '../components/ExerciseCard';
+import {APP_SCREEN} from '../navigators/screen-type';
+import {navigate} from '../navigators/navigation-services';
 
 export const SearchScreen: React.FC = () => {
-  const navigation = useNavigation();
   const {
     exercises,
     muscleGroups,
@@ -26,25 +25,32 @@ export const SearchScreen: React.FC = () => {
   } = useGymStore();
 
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
-  const [selectedEquipment, setSelectedEquipment] = useState<string | null>(null);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(
+    null,
+  );
+  const [selectedEquipment, setSelectedEquipment] = useState<string | null>(
+    null,
+  );
 
   useEffect(() => {
     initializeData();
   }, [initializeData]);
 
   const filteredExercises = getFilteredExercises().filter(exercise => {
-    const matchesDifficulty = !selectedDifficulty || exercise.difficulty === selectedDifficulty;
-    const matchesEquipment = !selectedEquipment || 
-      (selectedEquipment === 'none' ? exercise.equipment.length === 0 : 
-       exercise.equipment.includes(selectedEquipment));
-    
+    const matchesDifficulty =
+      !selectedDifficulty || exercise.difficulty === selectedDifficulty;
+    const matchesEquipment =
+      !selectedEquipment ||
+      (selectedEquipment === 'none'
+        ? exercise.equipment.length === 0
+        : exercise.equipment.includes(selectedEquipment));
+
     return matchesDifficulty && matchesEquipment;
   });
 
   // Get unique equipment list
   const allEquipment = Array.from(
-    new Set(exercises.flatMap(ex => ex.equipment))
+    new Set(exercises.flatMap(ex => ex.equipment)),
   ).filter(Boolean);
 
   const difficulties = ['Beginner', 'Intermediate', 'Advanced'];
@@ -80,8 +86,7 @@ export const SearchScreen: React.FC = () => {
                 <TouchableOpacity
                   key={index}
                   style={styles.recentSearchItem}
-                  onPress={() => handleRecentSearchPress(search)}
-                >
+                  onPress={() => handleRecentSearchPress(search)}>
                   <Text style={styles.recentSearchText}>{search}</Text>
                 </TouchableOpacity>
               ))}
@@ -93,15 +98,16 @@ export const SearchScreen: React.FC = () => {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>🔥 Tìm kiếm phổ biến</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {['Hít đất', 'Squat', 'Plank', 'Kéo xà', 'Burpee'].map((search, index) => (
-              <TouchableOpacity
-                key={index}
-                style={styles.popularSearchItem}
-                onPress={() => handleSearch(search)}
-              >
-                <Text style={styles.popularSearchText}>{search}</Text>
-              </TouchableOpacity>
-            ))}
+            {['Hít đất', 'Squat', 'Plank', 'Kéo xà', 'Burpee'].map(
+              (search, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.popularSearchItem}
+                  onPress={() => handleSearch(search)}>
+                  <Text style={styles.popularSearchText}>{search}</Text>
+                </TouchableOpacity>
+              ),
+            )}
           </ScrollView>
         </View>
 
@@ -109,12 +115,18 @@ export const SearchScreen: React.FC = () => {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Tìm theo nhóm cơ</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {muscleGroups.map((muscleGroup) => (
+            {muscleGroups.map(muscleGroup => (
               <TouchableOpacity
                 key={muscleGroup.id}
-                style={[styles.muscleGroupItem, { backgroundColor: muscleGroup.color }]}
-                onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_LIST as never, { muscleGroupId: muscleGroup.id } as never)}
-              >
+                style={[
+                  styles.muscleGroupItem,
+                  {backgroundColor: muscleGroup.color},
+                ]}
+                onPress={() =>
+                  navigate(APP_SCREEN.EXERCISE_LIST, {
+                    muscleGroupId: muscleGroup.id,
+                  })
+                }>
                 <Text style={styles.muscleGroupIcon}>{muscleGroup.icon}</Text>
                 <Text style={styles.muscleGroupText}>{muscleGroup.name}</Text>
               </TouchableOpacity>
@@ -146,21 +158,25 @@ export const SearchScreen: React.FC = () => {
           {/* Difficulty Filter */}
           <View style={styles.filterGroup}>
             <Text style={styles.filterLabel}>Độ khó:</Text>
-            {difficulties.map((difficulty) => (
+            {difficulties.map(difficulty => (
               <TouchableOpacity
                 key={difficulty}
                 style={[
                   styles.filterButton,
-                  selectedDifficulty === difficulty && styles.filterButtonActive
+                  selectedDifficulty === difficulty &&
+                    styles.filterButtonActive,
                 ]}
-                onPress={() => setSelectedDifficulty(
-                  selectedDifficulty === difficulty ? null : difficulty
-                )}
-              >
-                <Text style={[
-                  styles.filterButtonText,
-                  selectedDifficulty === difficulty && styles.filterButtonTextActive
-                ]}>
+                onPress={() =>
+                  setSelectedDifficulty(
+                    selectedDifficulty === difficulty ? null : difficulty,
+                  )
+                }>
+                <Text
+                  style={[
+                    styles.filterButtonText,
+                    selectedDifficulty === difficulty &&
+                      styles.filterButtonTextActive,
+                  ]}>
                   {difficulty}
                 </Text>
               </TouchableOpacity>
@@ -173,34 +189,39 @@ export const SearchScreen: React.FC = () => {
             <TouchableOpacity
               style={[
                 styles.filterButton,
-                selectedEquipment === 'none' && styles.filterButtonActive
+                selectedEquipment === 'none' && styles.filterButtonActive,
               ]}
-              onPress={() => setSelectedEquipment(
-                selectedEquipment === 'none' ? null : 'none'
-              )}
-            >
-              <Text style={[
-                styles.filterButtonText,
-                selectedEquipment === 'none' && styles.filterButtonTextActive
-              ]}>
+              onPress={() =>
+                setSelectedEquipment(
+                  selectedEquipment === 'none' ? null : 'none',
+                )
+              }>
+              <Text
+                style={[
+                  styles.filterButtonText,
+                  selectedEquipment === 'none' && styles.filterButtonTextActive,
+                ]}>
                 Không cần
               </Text>
             </TouchableOpacity>
-            {allEquipment.slice(0, 3).map((equipment) => (
+            {allEquipment.slice(0, 3).map(equipment => (
               <TouchableOpacity
                 key={equipment}
                 style={[
                   styles.filterButton,
-                  selectedEquipment === equipment && styles.filterButtonActive
+                  selectedEquipment === equipment && styles.filterButtonActive,
                 ]}
-                onPress={() => setSelectedEquipment(
-                  selectedEquipment === equipment ? null : equipment
-                )}
-              >
-                <Text style={[
-                  styles.filterButtonText,
-                  selectedEquipment === equipment && styles.filterButtonTextActive
-                ]}>
+                onPress={() =>
+                  setSelectedEquipment(
+                    selectedEquipment === equipment ? null : equipment,
+                  )
+                }>
+                <Text
+                  style={[
+                    styles.filterButtonText,
+                    selectedEquipment === equipment &&
+                      styles.filterButtonTextActive,
+                  ]}>
                   {equipment}
                 </Text>
               </TouchableOpacity>
@@ -210,7 +231,9 @@ export const SearchScreen: React.FC = () => {
 
         {/* Clear Filters */}
         {(selectedDifficulty || selectedEquipment || searchQuery) && (
-          <TouchableOpacity style={styles.clearFiltersButton} onPress={clearFilters}>
+          <TouchableOpacity
+            style={styles.clearFiltersButton}
+            onPress={clearFilters}>
             <Text style={styles.clearFiltersText}>Xóa bộ lọc</Text>
           </TouchableOpacity>
         )}
@@ -222,11 +245,13 @@ export const SearchScreen: React.FC = () => {
           <Text style={styles.resultsTitle}>
             {filteredExercises.length} kết quả
           </Text>
-          
+
           {filteredExercises.length === 0 ? (
             <View style={styles.noResultsContainer}>
               <Text style={styles.noResultsIcon}>🔍</Text>
-              <Text style={styles.noResultsText}>Không tìm thấy bài tập nào</Text>
+              <Text style={styles.noResultsText}>
+                Không tìm thấy bài tập nào
+              </Text>
               <Text style={styles.noResultsSubtext}>
                 Thử thay đổi từ khóa hoặc bộ lọc
               </Text>
@@ -234,11 +259,13 @@ export const SearchScreen: React.FC = () => {
           ) : (
             <FlatList
               data={filteredExercises}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => (
+              keyExtractor={item => item.id}
+              renderItem={({item}) => (
                 <ExerciseCard
                   exercise={item}
-                  onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_DETAIL as never, { exerciseId: item.id } as never)}
+                  onPress={() =>
+                    navigate(APP_SCREEN.EXERCISE_DETAIL, {exerciseId: item.id})
+                  }
                 />
               )}
               showsVerticalScrollIndicator={false}
@@ -262,7 +289,7 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#fff',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -10,19 +10,19 @@ import {
   Image,
   Animated,
 } from 'react-native';
-import { useGymStore } from '../store/gymStore';
-import { WorkoutPlan } from '../types/gym.types';
-import { useNavigation } from '@react-navigation/native';
-import { APP_SCREEN } from '../navigators/screen-type';
+import {useGymStore} from '../store/gymStore';
+import {WorkoutPlan} from '../types/gym.types';
+import {APP_SCREEN} from '../navigators/screen-type';
+import {navigate} from '../navigators/navigation-services';
 
-const { width } = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 interface WorkoutPlanCardProps {
   plan: WorkoutPlan;
   onPress: () => void;
 }
 
-const WorkoutPlanCard: React.FC<WorkoutPlanCardProps> = ({ plan, onPress }) => {
+const WorkoutPlanCard: React.FC<WorkoutPlanCardProps> = ({plan, onPress}) => {
   const scaleValue = useState(new Animated.Value(1))[0];
 
   const handlePress = () => {
@@ -44,13 +44,13 @@ const WorkoutPlanCard: React.FC<WorkoutPlanCardProps> = ({ plan, onPress }) => {
   const getGoalInfo = (goal: string) => {
     switch (goal) {
       case 'muscle_gain':
-        return { icon: '💪', name: 'Tăng cơ', color: '#4CAF50' };
+        return {icon: '💪', name: 'Tăng cơ', color: '#4CAF50'};
       case 'fat_loss':
-        return { icon: '🔥', name: 'Giảm mỡ', color: '#FF6B6B' };
+        return {icon: '🔥', name: 'Giảm mỡ', color: '#FF6B6B'};
       case 'strength':
-        return { icon: '🏋️', name: 'Tăng sức mạnh', color: '#FF9800' };
+        return {icon: '🏋️', name: 'Tăng sức mạnh', color: '#FF9800'};
       default:
-        return { icon: '⚖️', name: 'Duy trì', color: '#2196F3' };
+        return {icon: '⚖️', name: 'Duy trì', color: '#2196F3'};
     }
   };
 
@@ -68,7 +68,9 @@ const WorkoutPlanCard: React.FC<WorkoutPlanCardProps> = ({ plan, onPress }) => {
   };
 
   const goalInfo = getGoalInfo(plan.goal);
-  const totalWorkouts = plan.workouts.filter(w => w.exercises.length > 0).length;
+  const totalWorkouts = plan.workouts.filter(
+    w => w.exercises.length > 0,
+  ).length;
 
   const getPlanImage = (goal: string) => {
     switch (goal) {
@@ -84,50 +86,54 @@ const WorkoutPlanCard: React.FC<WorkoutPlanCardProps> = ({ plan, onPress }) => {
   };
 
   return (
-    <Animated.View style={[styles.planCard, { transform: [{ scale: scaleValue }] }]}>
+    <Animated.View
+      style={[styles.planCard, {transform: [{scale: scaleValue}]}]}>
       <TouchableOpacity onPress={handlePress}>
-        <Image source={{ uri: getPlanImage(plan.goal) }} style={styles.planImage} />
+        <Image
+          source={{uri: getPlanImage(plan.goal)}}
+          style={styles.planImage}
+        />
         <View style={styles.planHeader}>
-        <View style={styles.planTitleContainer}>
-          <Text style={styles.planTitle}>{plan.name}</Text>
-          <View style={styles.planGoal}>
-            <Text style={styles.planGoalIcon}>{goalInfo.icon}</Text>
-            <Text style={[styles.planGoalText, { color: goalInfo.color }]}>
-              {goalInfo.name}
-            </Text>
+          <View style={styles.planTitleContainer}>
+            <Text style={styles.planTitle}>{plan.name}</Text>
+            <View style={styles.planGoal}>
+              <Text style={styles.planGoalIcon}>{goalInfo.icon}</Text>
+              <Text style={[styles.planGoalText, {color: goalInfo.color}]}>
+                {goalInfo.name}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.planDuration}>
+            <Text style={styles.planDurationNumber}>{plan.duration}</Text>
+            <Text style={styles.planDurationText}>ngày</Text>
           </View>
         </View>
-        <View style={styles.planDuration}>
-          <Text style={styles.planDurationNumber}>{plan.duration}</Text>
-          <Text style={styles.planDurationText}>ngày</Text>
-        </View>
-      </View>
 
-      <Text style={styles.planDescription}>{plan.description}</Text>
+        <Text style={styles.planDescription}>{plan.description}</Text>
 
-      <View style={styles.planStats}>
-        <View style={styles.planStat}>
-          <Text style={styles.planStatValue}>{totalWorkouts}</Text>
-          <Text style={styles.planStatLabel}>Buổi tập</Text>
+        <View style={styles.planStats}>
+          <View style={styles.planStat}>
+            <Text style={styles.planStatValue}>{totalWorkouts}</Text>
+            <Text style={styles.planStatLabel}>Buổi tập</Text>
+          </View>
+          <View style={styles.planStat}>
+            <Text
+              style={[
+                styles.planStatValue,
+                {color: getDifficultyColor(plan.difficulty)},
+              ]}>
+              {plan.difficulty}
+            </Text>
+            <Text style={styles.planStatLabel}>Độ khó</Text>
+          </View>
         </View>
-        <View style={styles.planStat}>
-          <Text style={[
-            styles.planStatValue,
-            { color: getDifficultyColor(plan.difficulty) }
-          ]}>
-            {plan.difficulty}
-          </Text>
-          <Text style={styles.planStatLabel}>Độ khó</Text>
-        </View>
-      </View>
       </TouchableOpacity>
     </Animated.View>
   );
 };
 
 export const WorkoutPlansScreen: React.FC = () => {
-  const navigation = useNavigation();
-  const { workoutPlans, getAllWorkoutPlans, initializeData } = useGymStore();
+  const {workoutPlans, getAllWorkoutPlans, initializeData} = useGymStore();
 
   useEffect(() => {
     initializeData();
@@ -157,7 +163,7 @@ export const WorkoutPlansScreen: React.FC = () => {
   };
 
   const handlePlanPress = (plan: WorkoutPlan) => {
-    navigation.navigate(APP_SCREEN.WORKOUT_PLAN_DETAIL as never, { planId: plan.id } as never);
+    navigate(APP_SCREEN.WORKOUT_PLAN_DETAIL, {planId: plan.id});
   };
 
   return (
@@ -166,7 +172,9 @@ export const WorkoutPlansScreen: React.FC = () => {
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.title}>📋 Lộ trình tập luyện</Text>
-          <Text style={styles.subtitle}>Chọn lộ trình phù hợp với mục tiêu của bạn</Text>
+          <Text style={styles.subtitle}>
+            Chọn lộ trình phù hợp với mục tiêu của bạn
+          </Text>
         </View>
 
         {/* Quick Stats */}
@@ -193,7 +201,7 @@ export const WorkoutPlansScreen: React.FC = () => {
         {Object.entries(plansByGoal).map(([goal, plans]) => (
           <View key={goal} style={styles.goalSection}>
             <Text style={styles.goalTitle}>{getGoalTitle(goal)}</Text>
-            {plans.map((plan) => (
+            {plans.map(plan => (
               <WorkoutPlanCard
                 key={plan.id}
                 plan={plan}
@@ -211,8 +219,7 @@ export const WorkoutPlansScreen: React.FC = () => {
           </Text>
           <TouchableOpacity
             style={styles.customPlanButton}
-            onPress={() => navigation.navigate(APP_SCREEN.CREATE_WORKOUT_PLAN as never)}
-          >
+            onPress={() => navigate(APP_SCREEN.CREATE_WORKOUT_PLAN)}>
             <Text style={styles.customPlanButtonText}>Tạo lộ trình mới</Text>
           </TouchableOpacity>
         </View>
@@ -222,15 +229,21 @@ export const WorkoutPlansScreen: React.FC = () => {
           <Text style={styles.tipsTitle}>💡 Lời khuyên</Text>
           <View style={styles.tipItem}>
             <Text style={styles.tipBullet}>•</Text>
-            <Text style={styles.tipText}>Chọn lộ trình phù hợp với trình độ hiện tại</Text>
+            <Text style={styles.tipText}>
+              Chọn lộ trình phù hợp với trình độ hiện tại
+            </Text>
           </View>
           <View style={styles.tipItem}>
             <Text style={styles.tipBullet}>•</Text>
-            <Text style={styles.tipText}>Tuân thủ lịch tập để đạt hiệu quả tốt nhất</Text>
+            <Text style={styles.tipText}>
+              Tuân thủ lịch tập để đạt hiệu quả tốt nhất
+            </Text>
           </View>
           <View style={styles.tipItem}>
             <Text style={styles.tipBullet}>•</Text>
-            <Text style={styles.tipText}>Nghỉ ngơi đầy đủ giữa các buổi tập</Text>
+            <Text style={styles.tipText}>
+              Nghỉ ngơi đầy đủ giữa các buổi tập
+            </Text>
           </View>
         </View>
       </ScrollView>
@@ -271,7 +284,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     minWidth: 80,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -303,7 +316,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     overflow: 'hidden',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -391,7 +404,7 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -426,7 +439,7 @@ const styles = StyleSheet.create({
     margin: 16,
     padding: 20,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,

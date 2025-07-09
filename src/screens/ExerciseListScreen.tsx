@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -10,17 +10,20 @@ import {
   ScrollView,
   RefreshControl,
 } from 'react-native';
-import { useGymStore } from '../store/gymStore';
-import { ExerciseCard } from '../components/ExerciseCard';
-import { MuscleGroupCard } from '../components/MuscleGroupCard';
-import { useNavigation, useRoute } from '@react-navigation/native';
-import { APP_SCREEN } from '../navigators/screen-type';
+import {useGymStore} from '../store/gymStore';
+import {ExerciseCard} from '../components/ExerciseCard';
+import {MuscleGroupCard} from '../components/MuscleGroupCard';
+import {APP_SCREEN, RootStackParamList} from '../navigators/screen-type';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {navigate} from '../navigators/navigation-services';
 
-export const ExerciseListScreen: React.FC = () => {
-  const navigation = useNavigation();
-  const route = useRoute();
-  const { muscleGroupId } = (route.params as any) || {};
-  
+type ExerciseListProps = NativeStackScreenProps<
+  RootStackParamList,
+  APP_SCREEN.EXERCISE_LIST
+>;
+
+export const ExerciseListScreen: React.FC<ExerciseListProps> = ({route}) => {
+  const {muscleGroupId} = route.params || {};
   const {
     exercises,
     muscleGroups,
@@ -74,7 +77,9 @@ export const ExerciseListScreen: React.FC = () => {
     setShowMuscleGroups(true);
   };
 
-  const selectedMuscleGroupData = muscleGroups.find(mg => mg.id === selectedMuscleGroup);
+  const selectedMuscleGroupData = muscleGroups.find(
+    mg => mg.id === selectedMuscleGroup,
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -82,7 +87,9 @@ export const ExerciseListScreen: React.FC = () => {
       <View style={styles.header}>
         <Text style={styles.title}>Bài tập</Text>
         {(selectedMuscleGroup || searchQuery) && (
-          <TouchableOpacity onPress={handleClearFilter} style={styles.clearButton}>
+          <TouchableOpacity
+            onPress={handleClearFilter}
+            style={styles.clearButton}>
             <Text style={styles.clearButtonText}>Xóa bộ lọc</Text>
           </TouchableOpacity>
         )}
@@ -102,9 +109,17 @@ export const ExerciseListScreen: React.FC = () => {
       {/* Selected Muscle Group Info */}
       {selectedMuscleGroupData && (
         <View style={styles.selectedMuscleGroupContainer}>
-          <View style={[styles.selectedMuscleGroupCard, { backgroundColor: selectedMuscleGroupData.color }]}>
-            <Text style={styles.selectedMuscleGroupIcon}>{selectedMuscleGroupData.icon}</Text>
-            <Text style={styles.selectedMuscleGroupName}>{selectedMuscleGroupData.name}</Text>
+          <View
+            style={[
+              styles.selectedMuscleGroupCard,
+              {backgroundColor: selectedMuscleGroupData.color},
+            ]}>
+            <Text style={styles.selectedMuscleGroupIcon}>
+              {selectedMuscleGroupData.icon}
+            </Text>
+            <Text style={styles.selectedMuscleGroupName}>
+              {selectedMuscleGroupData.name}
+            </Text>
             <Text style={styles.selectedMuscleGroupCount}>
               {getMuscleGroupExerciseCount(selectedMuscleGroupData.id)} bài tập
             </Text>
@@ -114,10 +129,12 @@ export const ExerciseListScreen: React.FC = () => {
 
       {/* Muscle Groups Grid */}
       {showMuscleGroups && !searchQuery && (
-        <ScrollView style={styles.muscleGroupsSection} showsVerticalScrollIndicator={false}>
+        <ScrollView
+          style={styles.muscleGroupsSection}
+          showsVerticalScrollIndicator={false}>
           <Text style={styles.sectionTitle}>Chọn nhóm cơ</Text>
           <View style={styles.muscleGroupsContainer}>
-            {muscleGroups.map((muscleGroup) => (
+            {muscleGroups.map(muscleGroup => (
               <MuscleGroupCard
                 key={muscleGroup.id}
                 muscleGroup={muscleGroup}
@@ -136,22 +153,26 @@ export const ExerciseListScreen: React.FC = () => {
             {filteredExercises.length} bài tập
             {selectedMuscleGroupData && ` - ${selectedMuscleGroupData.name}`}
           </Text>
-          
+
           {filteredExercises.length === 0 ? (
             <View style={styles.emptyContainer}>
               <Text style={styles.emptyText}>Không tìm thấy bài tập nào</Text>
-              <TouchableOpacity onPress={handleClearFilter} style={styles.emptyButton}>
+              <TouchableOpacity
+                onPress={handleClearFilter}
+                style={styles.emptyButton}>
                 <Text style={styles.emptyButtonText}>Xem tất cả bài tập</Text>
               </TouchableOpacity>
             </View>
           ) : (
             <FlatList
               data={filteredExercises}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => (
+              keyExtractor={item => item.id}
+              renderItem={({item}) => (
                 <ExerciseCard
                   exercise={item}
-                  onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_DETAIL as never, { exerciseId: item.id } as never)}
+                  onPress={() =>
+                    navigate(APP_SCREEN.EXERCISE_DETAIL, {exerciseId: item.id})
+                  }
                 />
               )}
               showsVerticalScrollIndicator={false}
@@ -211,7 +232,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     fontSize: 16,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -225,7 +246,7 @@ const styles = StyleSheet.create({
     padding: 16,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,

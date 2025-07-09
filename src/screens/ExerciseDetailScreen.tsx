@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,14 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import { useGymStore } from '../store/gymStore';
-import { useTimerStore } from '../store/timerStore';
-import { useNavigation, useRoute } from '@react-navigation/native';
-import { APP_SCREEN } from '../navigators/screen-type';
+import {useGymStore} from '../store/gymStore';
+import {useTimerStore} from '../store/timerStore';
+import {APP_SCREEN, RootStackParamList} from '../navigators/screen-type';
 import FastImage from 'react-native-fast-image';
+import {goBack, navigate} from '../navigators/navigation-services';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-const { width } = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 const imageMap: Record<string, any> = {
   'push_up.gif': require('../assets/images/push_up.gif'),
@@ -33,14 +34,19 @@ const imageMap: Record<string, any> = {
   'russian_twist.gif': require('../assets/images/russian_twist.gif'),
 };
 
+type ExerciseDetailProps = NativeStackScreenProps<
+  RootStackParamList,
+  APP_SCREEN.EXERCISE_DETAIL
+>;
 
-export const ExerciseDetailScreen: React.FC = () => {
-  const navigation = useNavigation();
-  const route = useRoute();
-  const { exerciseId } = (route.params as any) || {};
+export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
+  route,
+}) => {
+  const {exerciseId} = route?.params || {};
 
-  const { exercises, favoriteExercises, toggleFavorite, initializeData } = useGymStore();
-  const { startRestTimer } = useTimerStore();
+  const {exercises, favoriteExercises, toggleFavorite, initializeData} =
+    useGymStore();
+  const {startRestTimer} = useTimerStore();
 
   useEffect(() => {
     initializeData();
@@ -54,7 +60,7 @@ export const ExerciseDetailScreen: React.FC = () => {
       <SafeAreaView style={styles.container}>
         <View style={styles.errorContainer}>
           <Text style={styles.errorText}>Không tìm thấy bài tập</Text>
-          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+          <TouchableOpacity onPress={goBack} style={styles.backButton}>
             <Text style={styles.backButtonText}>Quay lại</Text>
           </TouchableOpacity>
         </View>
@@ -64,15 +70,28 @@ export const ExerciseDetailScreen: React.FC = () => {
 
   const handleStartRestTimer = () => {
     startRestTimer(exercise.restTime);
-    navigation.navigate(APP_SCREEN.TIMER as never);
+    navigate(APP_SCREEN.TIMER);
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.imageContainer}>
-          <View style={{ width: 100, height: 40, backgroundColor: '#fff', left: 70, position: 'absolute', zIndex: 1 }} />
-          <FastImage source={imageMap[exercise.image]} style={styles.image} resizeMode='contain' />
+          <View
+            style={{
+              width: 100,
+              height: 40,
+              backgroundColor: '#fff',
+              left: 70,
+              position: 'absolute',
+              zIndex: 1,
+            }}
+          />
+          <FastImage
+            source={imageMap[exercise.image]}
+            style={styles.image}
+            resizeMode="contain"
+          />
         </View>
 
         <View style={styles.content}>
@@ -80,8 +99,12 @@ export const ExerciseDetailScreen: React.FC = () => {
           <View style={styles.header}>
             <Text style={styles.title}>{exercise.name}</Text>
             <View style={styles.muscleGroupContainer}>
-              <Text style={styles.muscleGroupIcon}>{exercise.muscleGroup.icon}</Text>
-              <Text style={styles.muscleGroupName}>{exercise.muscleGroup.name}</Text>
+              <Text style={styles.muscleGroupIcon}>
+                {exercise.muscleGroup.icon}
+              </Text>
+              <Text style={styles.muscleGroupName}>
+                {exercise.muscleGroup.name}
+              </Text>
             </View>
           </View>
 
@@ -100,14 +123,18 @@ export const ExerciseDetailScreen: React.FC = () => {
               <Text style={styles.statLabel}>Nghỉ</Text>
             </View>
             <View style={styles.statItem}>
-              <Text style={[
-                styles.statValue,
-                {
-                  color:
-                    exercise.difficulty === 'Beginner' ? '#4CAF50' :
-                      exercise.difficulty === 'Intermediate' ? '#FF9800' : '#F44336'
-                }
-              ]}>
+              <Text
+                style={[
+                  styles.statValue,
+                  {
+                    color:
+                      exercise.difficulty === 'Beginner'
+                        ? '#4CAF50'
+                        : exercise.difficulty === 'Intermediate'
+                        ? '#FF9800'
+                        : '#F44336',
+                  },
+                ]}>
                 {exercise.difficulty}
               </Text>
               <Text style={styles.statLabel}>Độ khó</Text>
@@ -134,7 +161,9 @@ export const ExerciseDetailScreen: React.FC = () => {
           {/* Breathing Technique */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>🫁 Kỹ thuật thở</Text>
-            <Text style={styles.breathingText}>{exercise.breathingTechnique}</Text>
+            <Text style={styles.breathingText}>
+              {exercise.breathingTechnique}
+            </Text>
           </View>
 
           {/* Tips */}
@@ -177,9 +206,10 @@ export const ExerciseDetailScreen: React.FC = () => {
           <View style={styles.actionButtons}>
             <TouchableOpacity
               style={styles.timerButton}
-              onPress={handleStartRestTimer}
-            >
-              <Text style={styles.timerButtonText}>⏱️ Bắt đầu hẹn giờ nghỉ</Text>
+              onPress={handleStartRestTimer}>
+              <Text style={styles.timerButtonText}>
+                ⏱️ Bắt đầu hẹn giờ nghỉ
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -198,7 +228,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: width,
-    height: 250
+    height: 250,
   },
   favoriteButton: {
     position: 'absolute',
@@ -364,7 +394,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,

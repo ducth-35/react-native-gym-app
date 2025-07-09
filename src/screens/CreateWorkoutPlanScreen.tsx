@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -10,20 +10,27 @@ import {
   Alert,
   Modal,
 } from 'react-native';
-import { useGymStore } from '../store/gymStore';
-import { useNavigation } from '@react-navigation/native';
-import { APP_SCREEN } from '../navigators/screen-type';
-import { WorkoutPlan, DailyWorkout, WorkoutExercise, Exercise } from '../types/gym.types';
+import {useGymStore} from '../store/gymStore';
+import {
+  WorkoutPlan,
+  DailyWorkout,
+  WorkoutExercise,
+  Exercise,
+} from '../types/gym.types';
+import {goBack} from '../navigators/navigation-services';
 
 export const CreateWorkoutPlanScreen: React.FC = () => {
-  const navigation = useNavigation();
-  const { exercises, initializeData, addCustomWorkoutPlan } = useGymStore();
-  
+  const {exercises, initializeData, addCustomWorkoutPlan} = useGymStore();
+
   const [planName, setPlanName] = useState('');
   const [planDescription, setPlanDescription] = useState('');
   const [planDuration, setPlanDuration] = useState('7');
-  const [planGoal, setPlanGoal] = useState<'muscle_gain' | 'fat_loss' | 'maintenance' | 'strength'>('maintenance');
-  const [planDifficulty, setPlanDifficulty] = useState<'Beginner' | 'Intermediate' | 'Advanced'>('Beginner');
+  const [planGoal, setPlanGoal] = useState<
+    'muscle_gain' | 'fat_loss' | 'maintenance' | 'strength'
+  >('maintenance');
+  const [planDifficulty, setPlanDifficulty] = useState<
+    'Beginner' | 'Intermediate' | 'Advanced'
+  >('Beginner');
   const [workouts, setWorkouts] = useState<DailyWorkout[]>([]);
   const [showExerciseModal, setShowExerciseModal] = useState(false);
   const [selectedDay, setSelectedDay] = useState<number>(0);
@@ -36,7 +43,7 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
   const initializeWorkouts = () => {
     const duration = parseInt(planDuration) || 7;
     const newWorkouts: DailyWorkout[] = [];
-    
+
     for (let i = 1; i <= duration; i++) {
       newWorkouts.push({
         day: i,
@@ -49,10 +56,10 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
   };
 
   const goals = [
-    { id: 'maintenance', name: 'Duy trì sức khỏe', icon: '⚖️', color: '#2196F3' },
-    { id: 'muscle_gain', name: 'Tăng cơ bắp', icon: '💪', color: '#4CAF50' },
-    { id: 'fat_loss', name: 'Giảm mỡ thừa', icon: '🔥', color: '#FF6B6B' },
-    { id: 'strength', name: 'Tăng sức mạnh', icon: '🏋️', color: '#FF9800' },
+    {id: 'maintenance', name: 'Duy trì sức khỏe', icon: '⚖️', color: '#2196F3'},
+    {id: 'muscle_gain', name: 'Tăng cơ bắp', icon: '💪', color: '#4CAF50'},
+    {id: 'fat_loss', name: 'Giảm mỡ thừa', icon: '🔥', color: '#FF6B6B'},
+    {id: 'strength', name: 'Tăng sức mạnh', icon: '🏋️', color: '#FF9800'},
   ];
 
   const difficulties = ['Beginner', 'Intermediate', 'Advanced'];
@@ -70,7 +77,10 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
         return {
           ...workout,
           exercises: [...workout.exercises, workoutExercise],
-          estimatedTime: workout.estimatedTime + (exercise.sets * 2) + (exercise.restTime * exercise.sets / 60),
+          estimatedTime:
+            workout.estimatedTime +
+            exercise.sets * 2 +
+            (exercise.restTime * exercise.sets) / 60,
         };
       }
       return workout;
@@ -83,7 +93,9 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
   const removeExerciseFromDay = (dayIndex: number, exerciseIndex: number) => {
     const updatedWorkouts = workouts.map((workout, index) => {
       if (index === dayIndex) {
-        const newExercises = workout.exercises.filter((_, i) => i !== exerciseIndex);
+        const newExercises = workout.exercises.filter(
+          (_, i) => i !== exerciseIndex,
+        );
         return {
           ...workout,
           exercises: newExercises,
@@ -131,16 +143,12 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
     // Save to store
     addCustomWorkoutPlan(newPlan);
 
-    Alert.alert(
-      'Thành công!',
-      'Lộ trình đã được tạo và lưu thành công!',
-      [
-        {
-          text: 'OK',
-          onPress: () => navigation.goBack(),
-        },
-      ]
-    );
+    Alert.alert('Thành công!', 'Lộ trình đã được tạo và lưu thành công!', [
+      {
+        text: 'OK',
+        onPress: () => goBack(),
+      },
+    ]);
   };
 
   const getExerciseName = (exerciseId: string) => {
@@ -154,13 +162,15 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.title}>✨ Tạo lộ trình mới</Text>
-          <Text style={styles.subtitle}>Tạo lộ trình tập luyện cá nhân hóa</Text>
+          <Text style={styles.subtitle}>
+            Tạo lộ trình tập luyện cá nhân hóa
+          </Text>
         </View>
 
         {/* Basic Info */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>📝 Thông tin cơ bản</Text>
-          
+
           <View style={styles.inputGroup}>
             <Text style={styles.inputLabel}>Tên lộ trình *</Text>
             <TextInput
@@ -199,16 +209,15 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>🎯 Mục tiêu</Text>
           <View style={styles.goalGrid}>
-            {goals.map((goal) => (
+            {goals.map(goal => (
               <TouchableOpacity
                 key={goal.id}
                 style={[
                   styles.goalCard,
-                  { backgroundColor: goal.color },
+                  {backgroundColor: goal.color},
                   planGoal === goal.id && styles.selectedGoal,
                 ]}
-                onPress={() => setPlanGoal(goal.id as any)}
-              >
+                onPress={() => setPlanGoal(goal.id as any)}>
                 <Text style={styles.goalIcon}>{goal.icon}</Text>
                 <Text style={styles.goalName}>{goal.name}</Text>
               </TouchableOpacity>
@@ -220,19 +229,20 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>📊 Độ khó</Text>
           <View style={styles.difficultyRow}>
-            {difficulties.map((difficulty) => (
+            {difficulties.map(difficulty => (
               <TouchableOpacity
                 key={difficulty}
                 style={[
                   styles.difficultyButton,
                   planDifficulty === difficulty && styles.selectedDifficulty,
                 ]}
-                onPress={() => setPlanDifficulty(difficulty as any)}
-              >
-                <Text style={[
-                  styles.difficultyText,
-                  planDifficulty === difficulty && styles.selectedDifficultyText,
-                ]}>
+                onPress={() => setPlanDifficulty(difficulty as any)}>
+                <Text
+                  style={[
+                    styles.difficultyText,
+                    planDifficulty === difficulty &&
+                      styles.selectedDifficultyText,
+                  ]}>
                   {difficulty}
                 </Text>
               </TouchableOpacity>
@@ -252,8 +262,7 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
                   onPress={() => {
                     setSelectedDay(workout.day);
                     setShowExerciseModal(true);
-                  }}
-                >
+                  }}>
                   <Text style={styles.addExerciseText}>+ Thêm bài tập</Text>
                 </TouchableOpacity>
               </View>
@@ -273,8 +282,9 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
                     </View>
                     <TouchableOpacity
                       style={styles.removeButton}
-                      onPress={() => removeExerciseFromDay(index, exerciseIndex)}
-                    >
+                      onPress={() =>
+                        removeExerciseFromDay(index, exerciseIndex)
+                      }>
                       <Text style={styles.removeButtonText}>×</Text>
                     </TouchableOpacity>
                   </View>
@@ -288,22 +298,21 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>👀 Xem trước</Text>
           <View style={styles.previewCard}>
-            <Text style={styles.previewTitle}>{planName || 'Tên lộ trình'}</Text>
+            <Text style={styles.previewTitle}>
+              {planName || 'Tên lộ trình'}
+            </Text>
             <Text style={styles.previewDescription}>
               {planDescription || 'Mô tả lộ trình'}
             </Text>
             <View style={styles.previewStats}>
-              <Text style={styles.previewStat}>
-                📅 {planDuration} ngày
-              </Text>
+              <Text style={styles.previewStat}>📅 {planDuration} ngày</Text>
               <Text style={styles.previewStat}>
                 🎯 {goals.find(g => g.id === planGoal)?.name}
               </Text>
+              <Text style={styles.previewStat}>📊 {planDifficulty}</Text>
               <Text style={styles.previewStat}>
-                📊 {planDifficulty}
-              </Text>
-              <Text style={styles.previewStat}>
-                💪 {workouts.filter(w => w.exercises.length > 0).length} buổi tập
+                💪 {workouts.filter(w => w.exercises.length > 0).length} buổi
+                tập
               </Text>
             </View>
           </View>
@@ -321,26 +330,25 @@ export const CreateWorkoutPlanScreen: React.FC = () => {
       <Modal
         visible={showExerciseModal}
         animationType="slide"
-        presentationStyle="pageSheet"
-      >
+        presentationStyle="pageSheet">
         <SafeAreaView style={styles.modalContainer}>
           <View style={styles.modalHeader}>
-            <Text style={styles.modalTitle}>Chọn bài tập cho ngày {selectedDay}</Text>
+            <Text style={styles.modalTitle}>
+              Chọn bài tập cho ngày {selectedDay}
+            </Text>
             <TouchableOpacity
               style={styles.closeButton}
-              onPress={() => setShowExerciseModal(false)}
-            >
+              onPress={() => setShowExerciseModal(false)}>
               <Text style={styles.closeButtonText}>✕</Text>
             </TouchableOpacity>
           </View>
-          
+
           <ScrollView style={styles.exerciseList}>
-            {exercises.map((exercise) => (
+            {exercises.map(exercise => (
               <TouchableOpacity
                 key={exercise.id}
                 style={styles.exerciseOption}
-                onPress={() => addExerciseToDay(exercise)}
-              >
+                onPress={() => addExerciseToDay(exercise)}>
                 <Text style={styles.exerciseOptionName}>{exercise.name}</Text>
                 <Text style={styles.exerciseOptionGroup}>
                   {exercise.muscleGroup.icon} {exercise.muscleGroup.name}
@@ -380,7 +388,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 20,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -541,7 +549,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -591,7 +599,7 @@ const styles = StyleSheet.create({
     padding: 16,
     marginBottom: 8,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
+    shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.1,
     shadowRadius: 2,
     elevation: 2,

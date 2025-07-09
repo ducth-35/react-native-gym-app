@@ -32,7 +32,6 @@ export type TabParamList = {
   [APP_SCREEN.HOME]: undefined;
   [APP_SCREEN.EXERCISE_LIST]: { muscleGroupId?: string };
   [APP_SCREEN.SEARCH]: undefined;
-  [APP_SCREEN.FAVORITES]: undefined;
   [APP_SCREEN.TIMER]: undefined;
   [APP_SCREEN.WORKOUT_PLANS]: undefined;
   [APP_SCREEN.CALENDAR]: undefined;

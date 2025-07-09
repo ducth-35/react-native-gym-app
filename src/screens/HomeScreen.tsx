@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -8,23 +8,22 @@ import {
   Dimensions,
   SafeAreaView,
 } from 'react-native';
-import { useGymStore } from '../store/gymStore';
-import { ExerciseCard } from '../components/ExerciseCard';
-import { MuscleGroupCard } from '../components/MuscleGroupCard';
-import { useNavigation } from '@react-navigation/native';
-import { APP_SCREEN } from '../navigators/screen-type';
+import {useGymStore} from '../store/gymStore';
+import {ExerciseCard} from '../components/ExerciseCard';
+import {MuscleGroupCard} from '../components/MuscleGroupCard';
+import {APP_SCREEN} from '../navigators/screen-type';
 import TextApp from '../components/textApp';
+import {navigate} from '../navigators/navigation-services';
 
-const { width } = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 export const HomeScreen: React.FC = () => {
-  const navigation = useNavigation();
   const {
     exercises,
     muscleGroups,
     initializeData,
     favoriteExercises,
-    workoutSessions
+    workoutSessions,
   } = useGymStore();
   const [greeting, setGreeting] = useState<string>('');
 
@@ -86,11 +85,15 @@ export const HomeScreen: React.FC = () => {
             <TextApp style={styles.statLabel}>Bài tập</TextApp>
           </View>
           <View style={styles.statCard}>
-            <TextApp style={styles.statNumber}>{favoriteExercises.length}</TextApp>
+            <TextApp style={styles.statNumber}>
+              {favoriteExercises.length}
+            </TextApp>
             <TextApp style={styles.statLabel}>Yêu thích</TextApp>
           </View>
           <View style={styles.statCard}>
-            <TextApp style={styles.statNumber}>{workoutSessions.length}</TextApp>
+            <TextApp style={styles.statNumber}>
+              {workoutSessions.length}
+            </TextApp>
             <TextApp style={styles.statLabel}>Buổi tập</TextApp>
           </View>
         </View>
@@ -99,16 +102,19 @@ export const HomeScreen: React.FC = () => {
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <TextApp style={styles.sectionTitle}>Gợi ý hôm nay</TextApp>
-            <TouchableOpacity onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_LIST as never)}>
+            <TouchableOpacity
+              onPress={() => navigate(APP_SCREEN.EXERCISE_LIST)}>
               <TextApp style={styles.seeAllText}>Xem tất cả</TextApp>
             </TouchableOpacity>
           </View>
 
-          {todaysSuggestions.map((exercise) => (
+          {todaysSuggestions.map(exercise => (
             <ExerciseCard
               key={exercise.id}
               exercise={exercise}
-              onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_DETAIL as never, { exerciseId: exercise.id } as never)}
+              onPress={() =>
+                navigate(APP_SCREEN.EXERCISE_DETAIL, {exerciseId: exercise.id})
+              }
             />
           ))}
         </View>
@@ -117,18 +123,23 @@ export const HomeScreen: React.FC = () => {
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <TextApp style={styles.sectionTitle}>Nhóm cơ</TextApp>
-            <TouchableOpacity onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_LIST as never)}>
+            <TouchableOpacity
+              onPress={() => navigate(APP_SCREEN.EXERCISE_LIST)}>
               <TextApp style={styles.seeAllText}>Xem tất cả</TextApp>
             </TouchableOpacity>
           </View>
 
           <View style={styles.muscleGroupsContainer}>
-            {muscleGroups.slice(0, 6).map((muscleGroup) => (
+            {muscleGroups.slice(0, 6).map(muscleGroup => (
               <MuscleGroupCard
                 key={muscleGroup.id}
                 muscleGroup={muscleGroup}
                 exerciseCount={getMuscleGroupExerciseCount(muscleGroup.id)}
-                onPress={() => navigation.navigate(APP_SCREEN.EXERCISE_LIST as never, { muscleGroupId: muscleGroup.id } as never)}
+                onPress={() =>
+                  navigate(APP_SCREEN.EXERCISE_LIST, {
+                    muscleGroupId: muscleGroup?.id,
+                  })
+                }
               />
             ))}
           </View>
@@ -136,36 +147,38 @@ export const HomeScreen: React.FC = () => {
 
         {/* Quick Actions */}
         <View style={styles.section}>
-          <TextApp style={[styles.sectionTitle, { marginHorizontal: 24, marginBottom: 4 }]}>Thao tác nhanh</TextApp>
+          <TextApp
+            style={[
+              styles.sectionTitle,
+              {marginHorizontal: 24, marginBottom: 4},
+            ]}>
+            Thao tác nhanh
+          </TextApp>
           <View style={styles.quickActionsContainer}>
             <TouchableOpacity
-              style={[styles.quickActionButton, { backgroundColor: '#4CAF50' }]}
-              onPress={() => navigation.navigate(APP_SCREEN.TIMER as never)}
-            >
+              style={[styles.quickActionButton, {backgroundColor: '#4CAF50'}]}
+              onPress={() => navigate(APP_SCREEN.TIMER)}>
               <TextApp style={styles.quickActionIcon}>⏱️</TextApp>
               <TextApp style={styles.quickActionText}>Hẹn giờ</TextApp>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.quickActionButton, { backgroundColor: '#2196F3' }]}
-              onPress={() => navigation.navigate(APP_SCREEN.WORKOUT_PLANS as never)}
-            >
+              style={[styles.quickActionButton, {backgroundColor: '#2196F3'}]}
+              onPress={() => navigate(APP_SCREEN.WORKOUT_PLANS)}>
               <TextApp style={styles.quickActionIcon}>📋</TextApp>
               <TextApp style={styles.quickActionText}>Lộ trình</TextApp>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.quickActionButton, { backgroundColor: '#FF9800' }]}
-              onPress={() => navigation.navigate(APP_SCREEN.CALENDAR as never)}
-            >
+              style={[styles.quickActionButton, {backgroundColor: '#FF9800'}]}
+              onPress={() => navigate(APP_SCREEN.CALENDAR)}>
               <TextApp style={styles.quickActionIcon}>📅</TextApp>
               <TextApp style={styles.quickActionText}>Lịch tập</TextApp>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.quickActionButton, { backgroundColor: '#9C27B0' }]}
-              onPress={() => navigation.navigate(APP_SCREEN.PROGRESS as never)}
-            >
+              style={[styles.quickActionButton, {backgroundColor: '#9C27B0'}]}
+              onPress={() => navigate(APP_SCREEN.PROGRESS)}>
               <TextApp style={styles.quickActionIcon}>📊</TextApp>
               <TextApp style={styles.quickActionText}>Tiến trình</TextApp>
             </TouchableOpacity>
@@ -175,20 +188,27 @@ export const HomeScreen: React.FC = () => {
         {/* Recent Sessions */}
         {/* {recentSessions.length > 0 && ( */}
         <View style={styles.section}>
-          <TextApp style={[styles.sectionTitle, { marginHorizontal: 24, marginBottom: 4 }]}>Buổi tập gần đây</TextApp>
-          {recentSessions.map((session) => (
+          <TextApp
+            style={[
+              styles.sectionTitle,
+              {marginHorizontal: 24, marginBottom: 4},
+            ]}>
+            Buổi tập gần đây
+          </TextApp>
+          {recentSessions.map(session => (
             <View key={session.id} style={styles.sessionCard}>
               <TextApp style={styles.sessionDate}>
                 {new Date(session.date).toLocaleDateString('vi-VN')}
               </TextApp>
-              <TextApp style={styles.sessionDuration}>{session.duration} phút</TextApp>
+              <TextApp style={styles.sessionDuration}>
+                {session.duration} phút
+              </TextApp>
               <TextApp style={styles.sessionExercises}>
                 {session.exercises.length} bài tập
               </TextApp>
             </View>
           ))}
         </View>
-
       </ScrollView>
     </SafeAreaView>
   );
@@ -226,7 +246,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     minWidth: 80,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -280,7 +300,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -304,7 +324,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
