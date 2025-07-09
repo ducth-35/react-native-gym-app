@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+// import Ionicons from 'react-native-vector-icons/Ionicons';
 import { ExerciseListScreen } from '../screens/ExerciseListScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { SearchScreen } from '../screens/SearchScreen';
@@ -59,13 +59,13 @@ export const TabNavigator = () => {
           component={component}
           options={{
             tabBarLabel: label,
-            tabBarIcon: ({focused, size, color}) => (
-              <Ionicons
-                name={focused ? icon : `${icon}-outline`}
-                size={size}
-                color={color}
-              />
-            ),
+            // tabBarIcon: ({focused, size, color}) => (
+            //   <Ionicons
+            //     name={focused ? icon : `${icon}-outline`}
+            //     size={size}
+            //     color={color}
+            //   />
+            // ),
           }}
         />
       ))}

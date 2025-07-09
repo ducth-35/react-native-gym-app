@@ -1,462 +1,5 @@
 [
   {
-    "id": "push_up",
-    "name": "Hít đất",
-    "muscleGroup": {
-      "id": "chest",
-      "name": "Ngực",
-      "icon": "💪",
-      "color": "#FF6B6B"
-    },
-    "description": "Bài tập cơ bản giúp phát triển cơ ngực, vai và tay sau",
-    "instructions": [
-      "Nằm sấp, đặt hai tay xuống sàn rộng bằng vai",
-      "Duỗi thẳng cơ thể từ đầu đến chân",
-      "Hạ thấp cơ thể cho đến khi ngực gần chạm sàn",
-      "Đẩy mạnh để trở về vị trí ban đầu"
-    ],
-    "sets": 3,
-    "reps": "10-15",
-    "restTime": 60,
-    "difficulty": "Beginner",
-    "equipment": [],
-    "image": "push_up.gif",
-    "tips": [
-      "Giữ cơ thể thẳng như một đường thẳng",
-      "Không để hông quá cao hoặc quá thấp",
-      "Tập trung vào việc siết chặt cơ bụng"
-    ],
-    "commonMistakes": [
-      "Để hông quá cao",
-      "Không hạ thấp đủ",
-      "Thở không đúng cách"
-    ],
-    "breathingTechnique": "Hít vào khi hạ xuống, thở ra khi đẩy lên"
-  },
-  {
-    "id": "pull_up",
-    "name": "Kéo xà",
-    "muscleGroup": {
-      "id": "back",
-      "name": "Lưng",
-      "icon": "🏋️",
-      "color": "#4ECDC4"
-    },
-    "description": "Bài tập phát triển cơ lưng, vai sau và cơ tay trước",
-    "instructions": [
-      "Treo người trên xà đơn, tay rộng bằng vai",
-      "Kéo cơ thể lên cho đến khi cằm vượt qua xà",
-      "Hạ xuống từ từ về vị trí ban đầu",
-      "Lặp lại động tác"
-    ],
-    "sets": 3,
-    "reps": "5-10",
-    "restTime": 90,
-    "difficulty": "Intermediate",
-    "equipment": [
-      "Xà đơn"
-    ],
-    "image": "pull_up.gif",
-    "tips": [
-      "Bắt đầu từ vị trí treo hoàn toàn",
-      "Kéo bằng cơ lưng, không chỉ bằng tay",
-      "Kiểm soát tốc độ khi hạ xuống"
-    ],
-    "commonMistakes": [
-      "Sử dụng quá nhiều động lực",
-      "Không kéo đủ cao",
-      "Hạ xuống quá nhanh"
-    ],
-    "breathingTechnique": "Thở ra khi kéo lên, hít vào khi hạ xuống"
-  },
-  {
-    "id": "squat",
-    "name": "Squat",
-    "muscleGroup": {
-      "id": "legs",
-      "name": "Chân",
-      "icon": "🦵",
-      "color": "#FFEAA7"
-    },
-    "description": "Bài tập cơ bản cho cơ đùi, mông và cơ chân",
-    "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Hạ thấp cơ thể như ngồi xuống ghế",
-      "Giữ lưng thẳng, đầu gối không vượt qua mũi chân",
-      "Đứng lên về vị trí ban đầu"
-    ],
-    "sets": 3,
-    "reps": "15-20",
-    "restTime": 60,
-    "difficulty": "Beginner",
-    "equipment": [],
-    "image": "squat.gif",
-    "tips": [
-      "Giữ trọng lượng ở gót chân",
-      "Đẩy đầu gối ra ngoài",
-      "Giữ ngực thẳng"
-    ],
-    "commonMistakes": [
-      "Đầu gối vượt qua mũi chân",
-      "Cúi người về phía trước",
-      "Không squat đủ sâu"
-    ],
-    "breathingTechnique": "Hít vào khi hạ xuống, thở ra khi đứng lên"
-  },
-  {
-    "id": "plank",
-    "name": "Plank",
-    "muscleGroup": {
-      "id": "abs",
-      "name": "Bụng",
-      "icon": "🔥",
-      "color": "#DDA0DD"
-    },
-    "description": "Bài tập tĩnh giúp tăng cường cơ core và ổn định cột sống",
-    "instructions": [
-      "Nằm sấp, chống cẳng tay và mũi chân xuống sàn",
-      "Giữ cơ thể thẳng từ đầu đến chân",
-      "Siết chặt cơ bụng và mông",
-      "Giữ tư thế trong thời gian quy định"
-    ],
-    "sets": 3,
-    "reps": "30-60 giây",
-    "restTime": 45,
-    "difficulty": "Beginner",
-    "equipment": [],
-    "image": "plank.gif",
-    "tips": [
-      "Không để hông quá cao hoặc quá thấp",
-      "Thở đều trong suốt bài tập",
-      "Tập trung vào việc siết chặt cơ core"
-    ],
-    "commonMistakes": [
-      "Để hông quá cao",
-      "Cúi đầu xuống",
-      "Nín thở"
-    ],
-    "breathingTechnique": "Thở đều và sâu trong suốt bài tập"
-  },
-  {
-    "id": "shoulder_press",
-    "name": "Đẩy vai",
-    "muscleGroup": {
-      "id": "shoulders",
-      "name": "Vai",
-      "icon": "💪",
-      "color": "#45B7D1"
-    },
-    "description": "Bài tập phát triển cơ vai trước và giữa",
-    "instructions": [
-      "Đứng thẳng, giữ tạ ở vai",
-      "Đẩy tạ lên trên đầu",
-      "Hạ xuống từ từ về vị trí ban đầu",
-      "Lặp lại động tác"
-    ],
-    "sets": 3,
-    "reps": "8-12",
-    "restTime": 75,
-    "difficulty": "Intermediate",
-    "equipment": [
-      "Tạ đơn"
-    ],
-    "image": "shoulder_press.gif",
-    "tips": [
-      "Giữ lưng thẳng",
-      "Không khóa hoàn toàn khuỷu tay",
-      "Kiểm soát tốc độ"
-    ],
-    "commonMistakes": [
-      "Cong lưng quá mức",
-      "Đẩy quá nhanh",
-      "Sử dụng trọng lượng quá nặng"
-    ],
-    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
-  },
-  {
-    "id": "bicep_curl",
-    "name": "Cuốn tay trước",
-    "muscleGroup": {
-      "id": "arms",
-      "name": "Tay",
-      "icon": "💪",
-      "color": "#96CEB4"
-    },
-    "description": "Bài tập tập trung vào cơ tay trước (bicep)",
-    "instructions": [
-      "Đứng thẳng, giữ tạ ở hai bên hông",
-      "Cuốn tạ lên về phía vai",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
-    ],
-    "sets": 3,
-    "reps": "10-15",
-    "restTime": 60,
-    "difficulty": "Beginner",
-    "equipment": [
-      "Tạ đơn"
-    ],
-    "image": "bicep_curl.gif",
-    "tips": [
-      "Giữ khuỷu tay sát cơ thể",
-      "Không sử dụng động lực",
-      "Tập trung vào việc siết cơ"
-    ],
-    "commonMistakes": [
-      "Đung đưa cơ thể",
-      "Cuốn quá nhanh",
-      "Không hạ xuống hoàn toàn"
-    ],
-    "breathingTechnique": "Thở ra khi cuốn lên, hít vào khi hạ xuống"
-  },
-  {
-    "id": "burpee",
-    "name": "Burpee",
-    "muscleGroup": {
-      "id": "fullbody",
-      "name": "Toàn thân",
-      "icon": "🏃",
-      "color": "#FD79A8"
-    },
-    "description": "Bài tập toàn thân kết hợp cardio và strength training",
-    "instructions": [
-      "Đứng thẳng, sau đó squat xuống",
-      "Đặt tay xuống sàn và nhảy chân ra sau",
-      "Thực hiện 1 push-up",
-      "Nhảy chân về phía trước và đứng lên nhảy cao"
-    ],
-    "sets": 3,
-    "reps": "5-10",
-    "restTime": 90,
-    "difficulty": "Advanced",
-    "equipment": [],
-    "image": "burpee.gif",
-    "tips": [
-      "Giữ nhịp độ ổn định",
-      "Tập trung vào kỹ thuật",
-      "Nghỉ ngơi khi cần thiết"
-    ],
-    "commonMistakes": [
-      "Thực hiện quá nhanh",
-      "Bỏ qua push-up",
-      "Không nhảy cao đủ"
-    ],
-    "breathingTechnique": "Thở đều trong suốt bài tập, không nín thở"
-  },
-  {
-    "id": "deadlift",
-    "name": "Deadlift",
-    "muscleGroup": {
-      "id": "back",
-      "name": "Lưng",
-      "icon": "🏋️",
-      "color": "#4ECDC4"
-    },
-    "description": "Bài tập compound phát triển toàn thân, tập trung vào lưng và chân",
-    "instructions": [
-      "Đứng thẳng, chân rộng bằng vai, thanh tạ trước chân",
-      "Cúi xuống, nắm thanh tạ bằng hai tay",
-      "Giữ lưng thẳng, ngực thẳng",
-      "Kéo thanh tạ lên bằng cách duỗi thẳng chân và hông"
-    ],
-    "sets": 3,
-    "reps": "5-8",
-    "restTime": 120,
-    "difficulty": "Advanced",
-    "equipment": [
-      "Thanh tạ",
-      "Tạ đĩa"
-    ],
-    "image": "deadlift.gif",
-    "tips": [
-      "Giữ thanh tạ sát cơ thể",
-      "Không cong lưng",
-      "Bắt đầu với trọng lượng nhẹ"
-    ],
-    "commonMistakes": [
-      "Cong lưng khi kéo",
-      "Thanh tạ xa cơ thể",
-      "Không duỗi thẳng hoàn toàn"
-    ],
-    "breathingTechnique": "Hít vào trước khi kéo, thở ra ở đỉnh"
-  },
-  {
-    "id": "bench_press",
-    "name": "Bench Press",
-    "muscleGroup": {
-      "id": "chest",
-      "name": "Ngực",
-      "icon": "💪",
-      "color": "#FF6B6B"
-    },
-    "description": "Bài tập cơ bản phát triển cơ ngực, vai và tay sau",
-    "instructions": [
-      "Nằm ngửa trên ghế, chân đặt chắc chắn",
-      "Nắm thanh tạ rộng hơn vai",
-      "Hạ thanh tạ xuống ngực từ từ",
-      "Đẩy mạnh lên về vị trí ban đầu"
-    ],
-    "sets": 3,
-    "reps": "8-12",
-    "restTime": 90,
-    "difficulty": "Intermediate",
-    "equipment": [
-      "Ghế bench",
-      "Thanh tạ",
-      "Tạ đĩa"
-    ],
-    "image": "bench_press.gif",
-    "tips": [
-      "Giữ vai chặt vào ghế",
-      "Kiểm soát tốc độ hạ xuống",
-      "Đẩy mạnh và nhanh lên"
-    ],
-    "commonMistakes": [
-      "Hạ thanh tạ quá nhanh",
-      "Không chạm ngực",
-      "Nâng mông khỏi ghế"
-    ],
-    "breathingTechnique": "Hít vào khi hạ xuống, thở ra khi đẩy lên"
-  },
-  {
-    "id": "mountain_climber",
-    "name": "Mountain Climber",
-    "muscleGroup": {
-      "id": "fullbody",
-      "name": "Toàn thân",
-      "icon": "🏃",
-      "color": "#FD79A8"
-    },
-    "description": "Bài tập cardio kết hợp tăng cường cơ core",
-    "instructions": [
-      "Bắt đầu ở tư thế plank",
-      "Đưa một chân về phía ngực",
-      "Nhanh chóng đổi chân",
-      "Lặp lại động tác như chạy tại chỗ"
-    ],
-    "sets": 3,
-    "reps": "30 giây",
-    "restTime": 45,
-    "difficulty": "Intermediate",
-    "equipment": [],
-    "image": "mountain_climber.gif",
-    "tips": [
-      "Giữ hông ổn định",
-      "Tăng tốc độ dần dần",
-      "Giữ cơ core chặt"
-    ],
-    "commonMistakes": [
-      "Nâng hông quá cao",
-      "Động tác quá chậm",
-      "Không giữ thẳng cơ thể"
-    ],
-    "breathingTechnique": "Thở đều và nhanh theo nhịp động tác"
-  },
-  {
-    "id": "lunges",
-    "name": "Lunges",
-    "muscleGroup": {
-      "id": "legs",
-      "name": "Chân",
-      "icon": "🦵",
-      "color": "#FFEAA7"
-    },
-    "description": "Bài tập phát triển cơ đùi, mông và cải thiện thể lực",
-    "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Bước một chân ra phía trước",
-      "Hạ thấp cơ thể cho đến khi cả hai đầu gối tạo góc 90 độ",
-      "Đẩy mạnh để trở về vị trí ban đầu"
-    ],
-    "sets": 3,
-    "reps": "10-12 mỗi chân",
-    "restTime": 60,
-    "difficulty": "Beginner",
-    "equipment": [],
-    "image": "bodyweight_lunges.gif",
-    "tips": [
-      "Giữ thân người thẳng",
-      "Đầu gối trước không vượt qua mũi chân",
-      "Phân bổ trọng lượng đều"
-    ],
-    "commonMistakes": [
-      "Nghiêng người về phía trước",
-      "Bước quá ngắn hoặc quá dài",
-      "Không hạ thấp đủ"
-    ],
-    "breathingTechnique": "Hít vào khi hạ xuống, thở ra khi đứng lên"
-  },
-  {
-    "id": "dips",
-    "name": "Dips",
-    "muscleGroup": {
-      "id": "arms",
-      "name": "Tay",
-      "icon": "💪",
-      "color": "#96CEB4"
-    },
-    "description": "Bài tập phát triển cơ tay sau và ngực dưới",
-    "instructions": [
-      "Nắm chặt thanh song song hoặc mép ghế",
-      "Nâng cơ thể lên, duỗi thẳng tay",
-      "Hạ thấp cơ thể bằng cách uốn cùi chỏ",
-      "Đẩy mạnh để trở về vị trí ban đầu"
-    ],
-    "sets": 3,
-    "reps": "6-10",
-    "restTime": 75,
-    "difficulty": "Intermediate",
-    "equipment": [
-      "Thanh song song hoặc ghế"
-    ],
-    "image": "dips.gif",
-    "tips": [
-      "Giữ cơ thể thẳng",
-      "Không hạ quá thấp",
-      "Kiểm soát tốc độ"
-    ],
-    "commonMistakes": [
-      "Hạ quá nhanh",
-      "Không duỗi thẳng hoàn toàn",
-      "Nghiêng người về phía trước"
-    ],
-    "breathingTechnique": "Hít vào khi hạ xuống, thở ra khi đẩy lên"
-  },
-  {
-    "id": "russian_twist",
-    "name": "Russian Twist",
-    "muscleGroup": {
-      "id": "abs",
-      "name": "Bụng",
-      "icon": "🔥",
-      "color": "#DDA0DD"
-    },
-    "description": "Bài tập xoay người phát triển cơ bụng chéo",
-    "instructions": [
-      "Ngồi trên sàn, gập đầu gối",
-      "Nghiêng người về phía sau một chút",
-      "Nâng chân khỏi sàn",
-      "Xoay thân người qua lại từ bên này sang bên kia"
-    ],
-    "sets": 3,
-    "reps": "20-30",
-    "restTime": 45,
-    "difficulty": "Intermediate",
-    "equipment": [],
-    "image": "russian_twist.gif",
-    "tips": [
-      "Giữ chân nâng cao",
-      "Xoay từ thân người, không chỉ tay",
-      "Kiểm soát tốc độ"
-    ],
-    "commonMistakes": [
-      "Xoay quá nhanh",
-      "Để chân chạm sàn",
-      "Chỉ xoay tay"
-    ],
-    "breathingTechnique": "Thở đều trong suốt bài tập"
-  },
-  {
     "id": "arm_scissors",
     "name": "Arm Scissors",
     "muscleGroup": {
@@ -467,10 +10,10 @@
     },
     "description": "Bài tập arm scissors giúp phát triển cơ ngực",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Arm Scissors",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ ngực",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -501,10 +44,10 @@
     },
     "description": "Bài tập incline chest fly machine giúp phát triển cơ ngực",
     "instructions": [
-      "Nằm hoặc đứng với tạ ở hai bên",
-      "Mở rộng tay ra hai bên",
-      "Đưa tay về phía trước như ôm",
-      "Trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -538,10 +81,10 @@
     },
     "description": "Bài tập pec deck fly giúp phát triển cơ ngực",
     "instructions": [
-      "Nằm hoặc đứng với tạ ở hai bên",
-      "Mở rộng tay ra hai bên",
-      "Đưa tay về phía trước như ôm",
-      "Trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -576,10 +119,10 @@
     },
     "description": "Bài tập dumbbell pullover giúp phát triển cơ ngực",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -614,10 +157,10 @@
     },
     "description": "Bài tập dumbbell bench press giúp phát triển cơ ngực",
     "instructions": [
-      "Chuẩn bị tư thế với tạ ở vị trí ban đầu",
-      "Đẩy tạ lên trên theo quỹ đạo thẳng",
-      "Duỗi thẳng tay ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -652,10 +195,10 @@
     },
     "description": "Bài tập cable crossover giúp phát triển cơ ngực",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Cable Crossover",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ ngực",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -690,10 +233,10 @@
     },
     "description": "Bài tập one-arm cable chest press giúp phát triển cơ ngực",
     "instructions": [
-      "Chuẩn bị tư thế với tạ ở vị trí ban đầu",
-      "Đẩy tạ lên trên theo quỹ đạo thẳng",
-      "Duỗi thẳng tay ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -730,10 +273,10 @@
     },
     "description": "Bài tập single-arm cable crossover giúp phát triển cơ ngực",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Single-Arm Cable Crossover",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ ngực",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -767,10 +310,10 @@
     },
     "description": "Bài tập incline dumbbell fly giúp phát triển cơ ngực",
     "instructions": [
-      "Nằm hoặc đứng với tạ ở hai bên",
-      "Mở rộng tay ra hai bên",
-      "Đưa tay về phía trước như ôm",
-      "Trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -804,10 +347,10 @@
     },
     "description": "Bài tập rowing machine giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -840,10 +383,10 @@
     },
     "description": "Bài tập lever front pulldown giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -876,10 +419,10 @@
     },
     "description": "Bài tập pull-up giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -912,10 +455,10 @@
     },
     "description": "Bài tập cable rear pulldown giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -950,10 +493,10 @@
     },
     "description": "Bài tập lat pulldown giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -987,10 +530,10 @@
     },
     "description": "Bài tập dumbbell row giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1025,10 +568,10 @@
     },
     "description": "Bài tập bent over dumbbell row giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1063,10 +606,10 @@
     },
     "description": "Bài tập dumbbell bent over reverse grip row giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1099,10 +642,10 @@
     },
     "description": "Bài tập reverse lat-pulldown giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1136,10 +679,10 @@
     },
     "description": "Bài tập muscle-up giúp phát triển cơ lưng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Muscle-Up",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ lưng",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1172,10 +715,10 @@
     },
     "description": "Bài tập seated zottman curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1209,10 +752,10 @@
     },
     "description": "Bài tập standing barbell concentration curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1247,10 +790,10 @@
     },
     "description": "Bài tập waiter curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1283,10 +826,10 @@
     },
     "description": "Bài tập double arm dumbbell curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1319,10 +862,10 @@
     },
     "description": "Bài tập dumbbell curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1355,10 +898,10 @@
     },
     "description": "Bài tập seated incline dumbbell curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1392,10 +935,10 @@
     },
     "description": "Bài tập lever preacher curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1429,10 +972,10 @@
     },
     "description": "Bài tập high cable single arm bicep curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1466,10 +1009,10 @@
     },
     "description": "Bài tập one arm cable curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1503,10 +1046,10 @@
     },
     "description": "Bài tập lying cable curl giúp phát triển cơ tay",
     "instructions": [
-      "Đứng thẳng hoặc ngồi, giữ tạ ở vị trí ban đầu",
-      "Cuốn tạ lên về phía vai bằng cơ tay trước",
-      "Siết chặt cơ tay trước ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1541,10 +1084,10 @@
     },
     "description": "Bài tập one-arm single-leg bench dips giúp phát triển cơ tay",
     "instructions": [
-      "Nắm chặt thanh song song hoặc mép ghế",
-      "Nâng cơ thể lên, duỗi thẳng tay",
-      "Hạ thấp cơ thể bằng cách uốn cùi chỏ",
-      "Đẩy mạnh để trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1578,10 +1121,10 @@
     },
     "description": "Bài tập barbell jm press giúp phát triển cơ tay",
     "instructions": [
-      "Chuẩn bị tư thế với tạ ở vị trí ban đầu",
-      "Đẩy tạ lên trên theo quỹ đạo thẳng",
-      "Duỗi thẳng tay ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1616,10 +1159,10 @@
     },
     "description": "Bài tập one arm triceps pushdown giúp phát triển cơ tay",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập One Arm Triceps Pushdown",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ tay",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1654,10 +1197,10 @@
     },
     "description": "Bài tập dumbbell kickback giúp phát triển cơ tay",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Dumbbell Kickback",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ tay",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1692,10 +1235,10 @@
     },
     "description": "Bài tập one-arm reverse pushdown giúp phát triển cơ tay",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập One-Arm Reverse Pushdown",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ tay",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1730,10 +1273,10 @@
     },
     "description": "Bài tập lever triceps dip giúp phát triển cơ tay",
     "instructions": [
-      "Nắm chặt thanh song song hoặc mép ghế",
-      "Nâng cơ thể lên, duỗi thẳng tay",
-      "Hạ thấp cơ thể bằng cách uốn cùi chỏ",
-      "Đẩy mạnh để trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1767,10 +1310,10 @@
     },
     "description": "Bài tập lying barbell triceps extension giúp phát triển cơ tay",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Lying Barbell Triceps Extension",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ tay",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1804,10 +1347,10 @@
     },
     "description": "Bài tập cable tricep kickback giúp phát triển cơ tay",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Cable Tricep Kickback",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ tay",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1843,10 +1386,10 @@
     },
     "description": "Bài tập triceps dips on floor giúp phát triển cơ tay",
     "instructions": [
-      "Nắm chặt thanh song song hoặc mép ghế",
-      "Nâng cơ thể lên, duỗi thẳng tay",
-      "Hạ thấp cơ thể bằng cách uốn cùi chỏ",
-      "Đẩy mạnh để trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1877,10 +1420,10 @@
     },
     "description": "Bài tập dumbbell seated front and back tate press giúp phát triển cơ tay",
     "instructions": [
-      "Chuẩn bị tư thế với tạ ở vị trí ban đầu",
-      "Đẩy tạ lên trên theo quỹ đạo thẳng",
-      "Duỗi thẳng tay ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1914,17 +1457,17 @@
     },
     "description": "Bài tập lean planche giúp phát triển cơ bụng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Lean Planche",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ bụng",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
     "restTime": 60,
     "difficulty": "Beginner",
     "equipment": [],
-    "image": "plank.gif",
+    "image": "lean_planche.gif",
     "tips": [
       "Giữ tư thế đúng trong suốt bài tập",
       "Kiểm soát tốc độ thực hiện",
@@ -1948,10 +1491,10 @@
     },
     "description": "Bài tập full planche giúp phát triển cơ bụng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Full Planche",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ bụng",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -1982,10 +1525,10 @@
     },
     "description": "Bài tập side plank hip adduction giúp phát triển cơ bụng",
     "instructions": [
-      "Nằm sấp, chống cẳng tay và mũi chân xuống sàn",
-      "Giữ cơ thể thẳng từ đầu đến chân",
-      "Siết chặt cơ bụng và mông",
-      "Giữ tư thế trong thời gian quy định"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2018,10 +1561,10 @@
     },
     "description": "Bài tập medicine ball rotational throw giúp phát triển cơ bụng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu",
-      "Kéo tạ về phía cơ thể bằng cơ lưng",
-      "Siết chặt cơ lưng ở đỉnh",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2052,10 +1595,10 @@
     },
     "description": "Bài tập dragon flag giúp phát triển cơ bụng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Dragon Flag",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ bụng",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2088,10 +1631,10 @@
     },
     "description": "Bài tập alternate leg raises giúp phát triển cơ bụng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Alternate Leg Raises",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ bụng",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2122,10 +1665,10 @@
     },
     "description": "Bài tập crunches giúp phát triển cơ bụng",
     "instructions": [
-      "Nằm ngửa, gập đầu gối",
-      "Đặt tay sau đầu hoặc chéo ngực",
-      "Nâng vai và đầu lên khỏi sàn",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2156,10 +1699,10 @@
     },
     "description": "Bài tập bicycle crunch giúp phát triển cơ bụng",
     "instructions": [
-      "Nằm ngửa, gập đầu gối",
-      "Đặt tay sau đầu hoặc chéo ngực",
-      "Nâng vai và đầu lên khỏi sàn",
-      "Hạ xuống từ từ về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2190,10 +1733,10 @@
     },
     "description": "Bài tập lying scissor kick giúp phát triển cơ bụng",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Lying Scissor Kick",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ bụng",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2224,10 +1767,10 @@
     },
     "description": "Bài tập bodyweight plie squat giúp phát triển cơ chân",
     "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Hạ thấp cơ thể như ngồi xuống ghế",
-      "Giữ lưng thẳng, đầu gối không vượt qua mũi chân",
-      "Đứng lên về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2260,10 +1803,10 @@
     },
     "description": "Bài tập smith machine squat giúp phát triển cơ chân",
     "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Hạ thấp cơ thể như ngồi xuống ghế",
-      "Giữ lưng thẳng, đầu gối không vượt qua mũi chân",
-      "Đứng lên về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2297,10 +1840,10 @@
     },
     "description": "Bài tập dumbbell cossack squat giúp phát triển cơ chân",
     "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Hạ thấp cơ thể như ngồi xuống ghế",
-      "Giữ lưng thẳng, đầu gối không vượt qua mũi chân",
-      "Đứng lên về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2334,10 +1877,10 @@
     },
     "description": "Bài tập dumbbell goblet squat giúp phát triển cơ chân",
     "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Hạ thấp cơ thể như ngồi xuống ghế",
-      "Giữ lưng thẳng, đầu gối không vượt qua mũi chân",
-      "Đứng lên về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2371,10 +1914,10 @@
     },
     "description": "Bài tập curtsy lunge giúp phát triển cơ chân",
     "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Bước một chân ra phía trước",
-      "Hạ thấp cơ thể cho đến khi cả hai đầu gối tạo góc 90 độ",
-      "Đẩy mạnh để trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2411,10 +1954,10 @@
     },
     "description": "Bài tập dumbbell good morning giúp phát triển cơ chân",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Dumbbell Good Morning",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ chân",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2448,10 +1991,10 @@
     },
     "description": "Bài tập dumbbell squat giúp phát triển cơ chân",
     "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Hạ thấp cơ thể như ngồi xuống ghế",
-      "Giữ lưng thẳng, đầu gối không vượt qua mũi chân",
-      "Đứng lên về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2488,10 +2031,10 @@
     },
     "description": "Bài tập depth jump to hurdle hop giúp phát triển cơ chân",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Depth Jump to Hurdle Hop",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ chân",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2522,10 +2065,10 @@
     },
     "description": "Bài tập power lunge giúp phát triển cơ chân",
     "instructions": [
-      "Đứng thẳng, chân rộng bằng vai",
-      "Bước một chân ra phía trước",
-      "Hạ thấp cơ thể cho đến khi cả hai đầu gối tạo góc 90 độ",
-      "Đẩy mạnh để trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
@@ -2562,10 +2105,10 @@
     },
     "description": "Bài tập dumbbell deadlift giúp phát triển cơ chân",
     "instructions": [
-      "Chuẩn bị tư thế ban đầu cho bài tập Dumbbell Deadlift",
-      "Thực hiện động tác theo đúng kỹ thuật",
-      "Tập trung vào nhóm cơ chân",
-      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+      "CalculatorsBody Mass Index (BMI)Body Fat IndexCalories BurnedDaily Calorie CalculatorOne Rep Max CalculatorGrip Strength Calculator",
+      "Body Mass Index (BMI)",
+      "Body Fat Index",
+      "Calories Burned"
     ],
     "sets": 3,
     "reps": "10-15",
