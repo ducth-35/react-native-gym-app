@@ -27,7 +27,7 @@ export const MuscleGroupCard: React.FC<MuscleGroupCardProps> = ({
       style={[styles.container, { backgroundColor: muscleGroup.color }]}
       onPress={onPress}
     >
-      <Text style={styles.icon}>{muscleGroup.icon}</Text>
+      {/* <Text style={styles.icon}>{muscleGroup.icon}</Text> */}
       <Text style={styles.name}>{muscleGroup.name}</Text>
       <Text style={styles.count}>{exerciseCount} bài tập</Text>
     </TouchableOpacity>

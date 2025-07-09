@@ -68,7 +68,6 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   };
 
   const imageMap: Record<string, any> = {
-    // Ảnh cũ
     'push_up.gif': require('../assets/images/push_up.gif'),
     'pull_up.gif': require('../assets/images/pull_up.gif'),
     'squat.gif': require('../assets/images/squat.gif'),
@@ -139,6 +138,27 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
     'depth_jump_to_hurdle_hop.gif': require('../assets/images/depth_jump_to_hurdle_hop.gif'),
     'power_lunge.gif': require('../assets/images/power_lunge.gif'),
     'dumbbell_deadlift.gif': require('../assets/images/dumbbell_deadlift.gif'),
+    'seated_barbell_shoulder_press.gif': require('../assets/images/seated_barbell_shoulder_press.gif'),
+    'dumbbell_push_press.gif': require('../assets/images/dumbbell_push_press.gif'),
+    'standing_dumbbell_shoulder_press.gif': require('../assets/images/standing_dumbbell_shoulder_press.gif'),
+    'arm_circles.gif': require('../assets/images/arm_circles.gif'),
+    'dumbbell_lateral_raise.gif': require('../assets/images/dumbbell_lateral_raise.gif'),
+    'dumbbell_shoulder_press.gif': require('../assets/images/dumbbell_shoulder_press.gif'),
+    'cable_lateral_raise.gif': require('../assets/images/cable_lateral_raise.gif'),
+    '45_degree_incline_row.gif': require('../assets/images/45_degree_incline_row.gif'),
+    'lever_shoulder_press.gif': require('../assets/images/lever_shoulder_press.gif'),
+    'standing_close_grip_military_press.gif': require('../assets/images/standing_close_grip_military_press.gif'),
+    'barbell_military_press_overhead_press.gif': require('../assets/images/barbell_military_press_overhead_press.gif'),
+    'dumbbell_chest_supported_lateral_raises.gif': require('../assets/images/dumbbell_chest_supported_lateral_raises.gif'),
+    'dumbbell_6_way_raise.gif': require('../assets/images/dumbbell_6_way_raise.gif'),
+    'dumbbell_4_way_lateral_raise.gif': require('../assets/images/dumbbell_4_way_lateral_raise.gif'),
+    'two_arm_dumbbell_front_raise.gif': require('../assets/images/two_arm_dumbbell_front_raise.gif'),
+    'dumbbell_front_raise.gif': require('../assets/images/dumbbell_front_raise.gif'),
+    'leaning_single_arm_dumbbell_lateral_raise.gif': require('../assets/images/leaning_single_arm_dumbbell_lateral_raise.gif'),
+    'seated_behind_neck_press.gif': require('../assets/images/seated_behind_neck_press.gif'),
+    'rear_delt_fly_machine.gif': require('../assets/images/rear_delt_fly_machine.gif'),
+    'seated_rear_lateral_dumbbell_raise.gif': require('../assets/images/seated_rear_lateral_dumbbell_raise.gif'),
+    'half_arnold_press.gif': require('../assets/images/half_arnold_press.gif'),
   };
 
 
@@ -157,9 +177,9 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
 
         <View style={styles.content}>
           <View style={styles.muscleGroup}>
-            <Text style={styles.muscleGroupIcon}>
+            {/* <Text style={styles.muscleGroupIcon}>
               {exercise.muscleGroup.icon}
-            </Text>
+            </Text> */}
             <Text style={styles.muscleGroupName}>
               {exercise.muscleGroup.name}
             </Text>

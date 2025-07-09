@@ -107,7 +107,7 @@ export const ExerciseListScreen: React.FC<ExerciseListProps> = ({route}) => {
       </View>
 
       {/* Selected Muscle Group Info */}
-      {selectedMuscleGroupData && (
+      {/* {selectedMuscleGroupData && (
         <View style={styles.selectedMuscleGroupContainer}>
           <View
             style={[
@@ -125,7 +125,7 @@ export const ExerciseListScreen: React.FC<ExerciseListProps> = ({route}) => {
             </Text>
           </View>
         </View>
-      )}
+      )} */}
 
       {/* Muscle Groups Grid */}
       {showMuscleGroups && !searchQuery && (
@@ -177,14 +177,14 @@ export const ExerciseListScreen: React.FC<ExerciseListProps> = ({route}) => {
               )}
               showsVerticalScrollIndicator={false}
               contentContainerStyle={styles.listContainer}
-              refreshControl={
-                <RefreshControl
-                  refreshing={refreshing}
-                  onRefresh={onRefresh}
-                  colors={['#FF6B6B']}
-                  tintColor="#FF6B6B"
-                />
-              }
+              // refreshControl={
+              //   <RefreshControl
+              //     refreshing={refreshing}
+              //     onRefresh={onRefresh}
+              //     colors={['#FF6B6B']}
+              //     tintColor="#FF6B6B"
+              //   />
+              // }
             />
           )}
         </View>

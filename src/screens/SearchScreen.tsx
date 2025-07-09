@@ -80,7 +80,7 @@ export const SearchScreen: React.FC = () => {
         {/* Recent Searches */}
         {recentSearches.length > 0 && (
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>🕒 Tìm kiếm gần đây</Text>
+            <Text style={styles.sectionTitle}>Tìm kiếm gần đây</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               {recentSearches.map((search, index) => (
                 <TouchableOpacity
@@ -96,7 +96,7 @@ export const SearchScreen: React.FC = () => {
 
         {/* Popular Searches */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>🔥 Tìm kiếm phổ biến</Text>
+          <Text style={styles.sectionTitle}>Tìm kiếm phổ biến</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {['Hít đất', 'Squat', 'Plank', 'Kéo xà', 'Burpee'].map(
               (search, index) => (
@@ -127,7 +127,7 @@ export const SearchScreen: React.FC = () => {
                     muscleGroupId: muscleGroup.id,
                   })
                 }>
-                <Text style={styles.muscleGroupIcon}>{muscleGroup.icon}</Text>
+                {/* <Text style={styles.muscleGroupIcon}>{muscleGroup.icon}</Text> */}
                 <Text style={styles.muscleGroupText}>{muscleGroup.name}</Text>
               </TouchableOpacity>
             ))}
@@ -153,9 +153,9 @@ export const SearchScreen: React.FC = () => {
       </View>
 
       {/* Filters */}
-      <View style={styles.filtersContainer}>
+      {/* <View style={styles.filtersContainer}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {/* Difficulty Filter */}
+        
           <View style={styles.filterGroup}>
             <Text style={styles.filterLabel}>Độ khó:</Text>
             {difficulties.map(difficulty => (
@@ -183,7 +183,6 @@ export const SearchScreen: React.FC = () => {
             ))}
           </View>
 
-          {/* Equipment Filter */}
           <View style={styles.filterGroup}>
             <Text style={styles.filterLabel}>Dụng cụ:</Text>
             <TouchableOpacity
@@ -227,17 +226,16 @@ export const SearchScreen: React.FC = () => {
               </TouchableOpacity>
             ))}
           </View>
-        </ScrollView>
+        </ScrollView> 
+      </View> */}
 
-        {/* Clear Filters */}
-        {(selectedDifficulty || selectedEquipment || searchQuery) && (
+       {(selectedDifficulty || selectedEquipment || searchQuery) && (
           <TouchableOpacity
             style={styles.clearFiltersButton}
             onPress={clearFilters}>
             <Text style={styles.clearFiltersText}>Xóa bộ lọc</Text>
           </TouchableOpacity>
         )}
-      </View>
 
       {/* Results */}
       {searchQuery.length > 0 || selectedDifficulty || selectedEquipment ? (

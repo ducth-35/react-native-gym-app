@@ -2587,5 +2587,802 @@
       "Sử dụng trọng lượng không phù hợp"
     ],
     "breathingTechnique": "Thở đều trong suốt bài tập"
+  },
+  {
+    "id": "seated_barbell_shoulder_press",
+    "name": "Seated Barbell Shoulder Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập seated barbell shoulder press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Thanh tạ",
+      "Tạ đơn",
+      "Ghế bench"
+    ],
+    "image": "seated_barbell_shoulder_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "dumbbell_push_press",
+    "name": "Dumbbell Push Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập dumbbell push press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Thanh tạ",
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_push_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "standing_dumbbell_shoulder_press",
+    "name": "Standing Dumbbell Shoulder Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập standing dumbbell shoulder press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Thanh tạ",
+      "Tạ đơn"
+    ],
+    "image": "standing_dumbbell_shoulder_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "side_arm_raises",
+    "name": "Side Arm Raises",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập side arm raises giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_lateral_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "arm_circles",
+    "name": "Arm Circles",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập arm circles giúp phát triển cơ vai",
+    "instructions": [
+      "Chuẩn bị tư thế ban đầu cho bài tập Arm Circles",
+      "Thực hiện động tác theo đúng kỹ thuật",
+      "Tập trung vào cơ vai",
+      "Kiểm soát tốc độ và trở về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [],
+    "image": "arm_circles.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "dumbbell_lateral_raise",
+    "name": "Dumbbell Lateral Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập dumbbell lateral raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_lateral_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "dumbbell_shoulder_press",
+    "name": "Dumbbell Shoulder Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập dumbbell shoulder press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_shoulder_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "cable_lateral_raise",
+    "name": "Cable Lateral Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập cable lateral raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Cable",
+      "Máy tập"
+    ],
+    "image": "cable_lateral_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "45_degree_incline_row",
+    "name": "45 Degree Incline Row",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập 45 degree incline row giúp phát triển cơ vai",
+    "instructions": [
+      "Cúi người về phía trước, giữ tạ",
+      "Kéo tạ về phía sau vai",
+      "Siết chặt cơ vai sau ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Thanh tạ",
+      "Tạ đơn",
+      "Ghế bench"
+    ],
+    "image": "45_degree_incline_row.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "lever_shoulder_press",
+    "name": "Lever Shoulder Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập lever shoulder press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Máy tập"
+    ],
+    "image": "lever_shoulder_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "standing_close_grip_military_press",
+    "name": "Standing Close Grip Military Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập standing close grip military press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Thanh tạ"
+    ],
+    "image": "standing_close_grip_military_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "barbell_military_press_overhead_press",
+    "name": "Barbell Military Press (Overhead press)",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập barbell military press (overhead press) giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Thanh tạ"
+    ],
+    "image": "barbell_military_press_overhead_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "dumbbell_chest_supported_lateral_raises",
+    "name": "Dumbbell Chest Supported Lateral Raises",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập dumbbell chest supported lateral raises giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_chest_supported_lateral_raises.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "dumbbell_6_way_raise",
+    "name": "Dumbbell 6 Way Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập dumbbell 6 way raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_6_way_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "dumbbell_4_way_lateral_raise",
+    "name": "Dumbbell 4 Way Lateral Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập dumbbell 4 way lateral raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_4_way_lateral_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "two_arm_dumbbell_front_raise",
+    "name": "Two Arm Dumbbell Front Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập two arm dumbbell front raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "two_arm_dumbbell_front_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "dumbbell_front_raise",
+    "name": "Dumbbell Front Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập dumbbell front raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "dumbbell_front_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "leaning_single_arm_dumbbell_lateral_raise",
+    "name": "Leaning Single Arm Dumbbell Lateral Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập leaning single arm dumbbell lateral raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "leaning_single_arm_dumbbell_lateral_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "seated_behind_neck_press",
+    "name": "Seated Behind Neck Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập seated behind neck press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Thanh tạ"
+    ],
+    "image": "seated_behind_neck_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "rear_delt_fly_machine",
+    "name": "Rear Delt Fly Machine",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập rear delt fly machine giúp phát triển cơ vai",
+    "instructions": [
+      "Cúi người về phía trước, giữ tạ",
+      "Kéo tạ về phía sau vai",
+      "Siết chặt cơ vai sau ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Máy tập"
+    ],
+    "image": "rear_delt_fly_machine.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "seated_rear_lateral_dumbbell_raise",
+    "name": "Seated Rear Lateral Dumbbell Raise",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập seated rear lateral dumbbell raise giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng, giữ tạ ở hai bên hông",
+      "Nâng tay ra hai bên đến ngang vai",
+      "Giữ một chút ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "seated_rear_lateral_dumbbell_raise.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
+  },
+  {
+    "id": "half_arnold_press",
+    "name": "Half Arnold Press",
+    "muscleGroup": {
+      "id": "shoulders",
+      "name": "Vai",
+      "icon": "💪",
+      "color": "#45B7D1"
+    },
+    "description": "Bài tập half arnold press giúp phát triển cơ vai",
+    "instructions": [
+      "Đứng thẳng hoặc ngồi, giữ tạ ở vai",
+      "Đẩy tạ lên trên đầu theo đường thẳng",
+      "Duỗi thẳng tay ở đỉnh",
+      "Hạ xuống từ từ về vị trí ban đầu"
+    ],
+    "sets": 3,
+    "reps": "8-12",
+    "restTime": 75,
+    "difficulty": "Intermediate",
+    "equipment": [
+      "Tạ đơn"
+    ],
+    "image": "half_arnold_press.gif",
+    "tips": [
+      "Giữ lưng thẳng trong suốt bài tập",
+      "Kiểm soát tốc độ thực hiện",
+      "Tập trung vào cơ vai"
+    ],
+    "commonMistakes": [
+      "Sử dụng trọng lượng quá nặng",
+      "Thực hiện quá nhanh",
+      "Không giữ tư thế đúng"
+    ],
+    "breathingTechnique": "Thở ra khi đẩy lên, hít vào khi hạ xuống"
   }
 ]

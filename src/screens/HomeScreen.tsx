@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -8,14 +8,14 @@ import {
   Dimensions,
   SafeAreaView,
 } from 'react-native';
-import {useGymStore} from '../store/gymStore';
-import {ExerciseCard} from '../components/ExerciseCard';
-import {MuscleGroupCard} from '../components/MuscleGroupCard';
-import {APP_SCREEN} from '../navigators/screen-type';
+import { useGymStore } from '../store/gymStore';
+import { ExerciseCard } from '../components/ExerciseCard';
+import { MuscleGroupCard } from '../components/MuscleGroupCard';
+import { APP_SCREEN } from '../navigators/screen-type';
 import TextApp from '../components/textApp';
-import {navigate} from '../navigators/navigation-services';
+import { navigate } from '../navigators/navigation-services';
 
-const {width} = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 export const HomeScreen: React.FC = () => {
   const {
@@ -71,15 +71,14 @@ export const HomeScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      {/* Header */}
+      <View style={styles.header}>
+        <TextApp style={styles.greeting}>👋 {greeting}!</TextApp>
+        <TextApp style={styles.subtitle}>Sẵn sàng tập luyện hôm nay?</TextApp>
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Header */}
-        <View style={styles.header}>
-          <TextApp style={styles.greeting}>👋 {greeting}!</TextApp>
-          <TextApp style={styles.subtitle}>Sẵn sàng tập luyện hôm nay?</TextApp>
-        </View>
-
         {/* Quick Stats */}
-        <View style={styles.statsContainer}>
+        {/* <View style={styles.statsContainer}>
           <View style={styles.statCard}>
             <TextApp style={styles.statNumber}>{exercises.length}</TextApp>
             <TextApp style={styles.statLabel}>Bài tập</TextApp>
@@ -96,7 +95,7 @@ export const HomeScreen: React.FC = () => {
             </TextApp>
             <TextApp style={styles.statLabel}>Buổi tập</TextApp>
           </View>
-        </View>
+        </View> */}
 
         {/* Today's Suggestions */}
         <View style={styles.section}>
@@ -113,7 +112,7 @@ export const HomeScreen: React.FC = () => {
               key={exercise.id}
               exercise={exercise}
               onPress={() =>
-                navigate(APP_SCREEN.EXERCISE_DETAIL, {exerciseId: exercise.id})
+                navigate(APP_SCREEN.EXERCISE_DETAIL, { exerciseId: exercise.id })
               }
             />
           ))}
@@ -146,52 +145,52 @@ export const HomeScreen: React.FC = () => {
         </View>
 
         {/* Quick Actions */}
-        <View style={styles.section}>
+        {/* <View style={styles.section}>
           <TextApp
             style={[
               styles.sectionTitle,
-              {marginHorizontal: 24, marginBottom: 4},
+              { marginHorizontal: 24, marginBottom: 4 },
             ]}>
             Thao tác nhanh
           </TextApp>
           <View style={styles.quickActionsContainer}>
             <TouchableOpacity
-              style={[styles.quickActionButton, {backgroundColor: '#4CAF50'}]}
+              style={[styles.quickActionButton, { backgroundColor: '#4CAF50' }]}
               onPress={() => navigate(APP_SCREEN.TIMER)}>
               <TextApp style={styles.quickActionIcon}>⏱️</TextApp>
               <TextApp style={styles.quickActionText}>Hẹn giờ</TextApp>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.quickActionButton, {backgroundColor: '#2196F3'}]}
+              style={[styles.quickActionButton, { backgroundColor: '#2196F3' }]}
               onPress={() => navigate(APP_SCREEN.WORKOUT_PLANS)}>
               <TextApp style={styles.quickActionIcon}>📋</TextApp>
               <TextApp style={styles.quickActionText}>Lộ trình</TextApp>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.quickActionButton, {backgroundColor: '#FF9800'}]}
+              style={[styles.quickActionButton, { backgroundColor: '#FF9800' }]}
               onPress={() => navigate(APP_SCREEN.CALENDAR)}>
               <TextApp style={styles.quickActionIcon}>📅</TextApp>
               <TextApp style={styles.quickActionText}>Lịch tập</TextApp>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.quickActionButton, {backgroundColor: '#9C27B0'}]}
+              style={[styles.quickActionButton, { backgroundColor: '#9C27B0' }]}
               onPress={() => navigate(APP_SCREEN.PROGRESS)}>
               <TextApp style={styles.quickActionIcon}>📊</TextApp>
               <TextApp style={styles.quickActionText}>Tiến trình</TextApp>
             </TouchableOpacity>
           </View>
-        </View>
+        </View> */}
 
         {/* Recent Sessions */}
         {/* {recentSessions.length > 0 && ( */}
-        <View style={styles.section}>
+        {/* <View style={styles.section}>
           <TextApp
             style={[
               styles.sectionTitle,
-              {marginHorizontal: 24, marginBottom: 4},
+              { marginHorizontal: 24, marginBottom: 4 },
             ]}>
             Buổi tập gần đây
           </TextApp>
@@ -208,7 +207,7 @@ export const HomeScreen: React.FC = () => {
               </TextApp>
             </View>
           ))}
-        </View>
+        </View> */}
       </ScrollView>
     </SafeAreaView>
   );
@@ -246,7 +245,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     minWidth: 80,
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -300,7 +299,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,
@@ -324,7 +323,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
     elevation: 5,

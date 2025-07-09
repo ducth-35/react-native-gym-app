@@ -95,7 +95,7 @@ export const TimerComponent: React.FC<TimerComponentProps> = ({
           disabled={timeLeft === 0}
         >
           <Text style={styles.buttonText}>
-            {isRunning ? '⏸️ Tạm dừng' : '▶️ Bắt đầu'}
+            {isRunning ? 'Tạm dừng' : 'Bắt đầu'}
           </Text>
         </TouchableOpacity>
 
@@ -103,7 +103,7 @@ export const TimerComponent: React.FC<TimerComponentProps> = ({
           style={[styles.button, styles.stopButton]}
           onPress={stopTimer}
         >
-          <Text style={styles.buttonText}>⏹️ Dừng</Text>
+          <Text style={styles.buttonText}>Dừng</Text>
         </TouchableOpacity>
       </View>
 

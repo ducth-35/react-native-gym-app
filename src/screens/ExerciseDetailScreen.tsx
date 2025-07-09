@@ -19,75 +19,97 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 const {width} = Dimensions.get('window');
 
 const imageMap: Record<string, any> = {
-  // Ảnh cũ
   'push_up.gif': require('../assets/images/push_up.gif'),
-  'pull_up.gif': require('../assets/images/pull_up.gif'),
-  'squat.gif': require('../assets/images/squat.gif'),
-  'plank.gif': require('../assets/images/plank.gif'),
-  'shoulder_press.gif': require('../assets/images/shoulder_press.gif'),
-  'bicep_curl.gif': require('../assets/images/bicep_curl.gif'),
-  'burpee.gif': require('../assets/images/burpee.gif'),
-  'deadlift.gif': require('../assets/images/deadlift.gif'),
-  'bench_press.gif': require('../assets/images/bench_press.gif'),
-  'mountain_climber.gif': require('../assets/images/mountain_climber.gif'),
-  'arm_scissors.gif': require('../assets/images/arm_scissors.gif'),
-  'incline_chest_fly_machine.gif': require('../assets/images/incline_chest_fly_machine.gif'),
-  'pec_deck_fly.gif': require('../assets/images/pec_deck_fly.gif'),
-  'dumbbell_pullover.gif': require('../assets/images/dumbbell_pullover.gif'),
-  'dumbbell_bench_press.gif': require('../assets/images/dumbbell_bench_press.gif'),
-  'cable_crossover.gif': require('../assets/images/cable_crossover.gif'),
-  'onearm_cable_chest_press.gif': require('../assets/images/onearm_cable_chest_press.gif'),
-  'singlearm_cable_crossover.gif': require('../assets/images/singlearm_cable_crossover.gif'),
-  'incline_dumbbell_fly.gif': require('../assets/images/incline_dumbbell_fly.gif'),
-  'rowing_machine.gif': require('../assets/images/rowing_machine.gif'),
-  'lever_front_pulldown.gif': require('../assets/images/lever_front_pulldown.gif'),
-  'pullup.gif': require('../assets/images/pullup.gif'),
-  'cable_rear_pulldown.gif': require('../assets/images/cable_rear_pulldown.gif'),
-  'lat_pulldown.gif': require('../assets/images/lat_pulldown.gif'),
-  'dumbbell_row.gif': require('../assets/images/dumbbell_row.gif'),
-  'bent_over_dumbbell_row.gif': require('../assets/images/bent_over_dumbbell_row.gif'),
-  'dumbbell_bent_over_reverse_grip_row.gif': require('../assets/images/dumbbell_bent_over_reverse_grip_row.gif'),
-  'reverse_latpulldown.gif': require('../assets/images/reverse_latpulldown.gif'),
-  'muscleup.gif': require('../assets/images/muscleup.gif'),
-  'seated_zottman_curl.gif': require('../assets/images/seated_zottman_curl.gif'),
-  'standing_barbell_concentration_curl.gif': require('../assets/images/standing_barbell_concentration_curl.gif'),
-  'waiter_curl.gif': require('../assets/images/waiter_curl.gif'),
-  'double_arm_dumbbell_curl.gif': require('../assets/images/double_arm_dumbbell_curl.gif'),
-  'dumbbell_curl.gif': require('../assets/images/dumbbell_curl.gif'),
-  'seated_incline_dumbbell_curl.gif': require('../assets/images/seated_incline_dumbbell_curl.gif'),
-  'lever_preacher_curl.gif': require('../assets/images/lever_preacher_curl.gif'),
-  'high_cable_single_arm_bicep_curl.gif': require('../assets/images/high_cable_single_arm_bicep_curl.gif'),
-  'one_arm_cable_curl.gif': require('../assets/images/one_arm_cable_curl.gif'),
-  'russian_twist.gif': require('../assets/images/russian_twist.gif'),
-  'lying_cable_curl.gif': require('../assets/images/lying_cable_curl.gif'),
-  'onearm_singleleg_bench_dips.gif': require('../assets/images/onearm_singleleg_bench_dips.gif'),
-  'barbell_jm_press.gif': require('../assets/images/barbell_jm_press.gif'),
-  'one_arm_triceps_pushdown.gif': require('../assets/images/one_arm_triceps_pushdown.gif'),
-  'dumbbell_kickback.gif': require('../assets/images/dumbbell_kickback.gif'),
-  'onearm_reverse_pushdown.gif': require('../assets/images/onearm_reverse_pushdown.gif'),
-  'lever_triceps_dip.gif': require('../assets/images/lever_triceps_dip.gif'),
-  'lying_barbell_triceps_extension.gif': require('../assets/images/lying_barbell_triceps_extension.gif'),
-  'cable_tricep_kickback.gif': require('../assets/images/cable_tricep_kickback.gif'),
-  'triceps_dips_on_floor.gif': require('../assets/images/triceps_dips_on_floor.gif'),
-  'dumbbell_seated_front_and_back_tate_press.gif': require('../assets/images/dumbbell_seated_front_and_back_tate_press.gif'),
-  'full_planche.gif': require('../assets/images/full_planche.gif'),
-  'side_plank_hip_adduction.gif': require('../assets/images/side_plank_hip_adduction.gif'),
-  'medicine_ball_rotational_throw.gif': require('../assets/images/medicine_ball_rotational_throw.gif'),
-  'dragon_flag.gif': require('../assets/images/dragon_flag.gif'),
-  'alternate_leg_raises.gif': require('../assets/images/alternate_leg_raises.gif'),
-  'crunches.gif': require('../assets/images/crunches.gif'),
-  'bicycle_crunch.gif': require('../assets/images/bicycle_crunch.gif'),
-  'lying_scissor_kick.gif': require('../assets/images/lying_scissor_kick.gif'),
-  'bodyweight_plie_squat.gif': require('../assets/images/bodyweight_plie_squat.gif'),
-  'smith_machine_squat.gif': require('../assets/images/smith_machine_squat.gif'),
-  'dumbbell_cossack_squat.gif': require('../assets/images/dumbbell_cossack_squat.gif'),
-  'dumbbell_goblet_squat.gif': require('../assets/images/dumbbell_goblet_squat.gif'),
-  'curtsy_lunge.gif': require('../assets/images/curtsy_lunge.gif'),
-  'dumbbell_good_morning.gif': require('../assets/images/dumbbell_good_morning.gif'),
-  'dumbbell_squat.gif': require('../assets/images/dumbbell_squat.gif'),
-  'depth_jump_to_hurdle_hop.gif': require('../assets/images/depth_jump_to_hurdle_hop.gif'),
-  'power_lunge.gif': require('../assets/images/power_lunge.gif'),
-  'dumbbell_deadlift.gif': require('../assets/images/dumbbell_deadlift.gif'),
+    'pull_up.gif': require('../assets/images/pull_up.gif'),
+    'squat.gif': require('../assets/images/squat.gif'),
+    'plank.gif': require('../assets/images/plank.gif'),
+    'shoulder_press.gif': require('../assets/images/shoulder_press.gif'),
+    'bicep_curl.gif': require('../assets/images/bicep_curl.gif'),
+    'burpee.gif': require('../assets/images/burpee.gif'),
+    'deadlift.gif': require('../assets/images/deadlift.gif'),
+    'bench_press.gif': require('../assets/images/bench_press.gif'),
+    'mountain_climber.gif': require('../assets/images/mountain_climber.gif'),
+    'bodyweight_lunges.gif': require('../assets/images/bodyweight_lunges.gif'),
+    'dips.gif': require('../assets/images/dips.gif'),
+    'russian_twist.gif': require('../assets/images/russian_twist.gif'),
+    'arm_scissors.gif': require('../assets/images/arm_scissors.gif'),
+    'incline_chest_fly_machine.gif': require('../assets/images/incline_chest_fly_machine.gif'),
+    'pec_deck_fly.gif': require('../assets/images/pec_deck_fly.gif'),
+    'dumbbell_pullover.gif': require('../assets/images/dumbbell_pullover.gif'),
+    'dumbbell_bench_press.gif': require('../assets/images/dumbbell_bench_press.gif'),
+    'cable_crossover.gif': require('../assets/images/cable_crossover.gif'),
+    'onearm_cable_chest_press.gif': require('../assets/images/onearm_cable_chest_press.gif'),
+    'singlearm_cable_crossover.gif': require('../assets/images/singlearm_cable_crossover.gif'),
+    'incline_dumbbell_fly.gif': require('../assets/images/incline_dumbbell_fly.gif'),
+    'rowing_machine.gif': require('../assets/images/rowing_machine.gif'),
+    'lever_front_pulldown.gif': require('../assets/images/lever_front_pulldown.gif'),
+    'pullup.gif': require('../assets/images/pullup.gif'),
+    'cable_rear_pulldown.gif': require('../assets/images/cable_rear_pulldown.gif'),
+    'lat_pulldown.gif': require('../assets/images/lat_pulldown.gif'),
+    'dumbbell_row.gif': require('../assets/images/dumbbell_row.gif'),
+    'bent_over_dumbbell_row.gif': require('../assets/images/bent_over_dumbbell_row.gif'),
+    'dumbbell_bent_over_reverse_grip_row.gif': require('../assets/images/dumbbell_bent_over_reverse_grip_row.gif'),
+    'reverse_latpulldown.gif': require('../assets/images/reverse_latpulldown.gif'),
+    'muscleup.gif': require('../assets/images/muscleup.gif'),
+    'seated_zottman_curl.gif': require('../assets/images/seated_zottman_curl.gif'),
+    'standing_barbell_concentration_curl.gif': require('../assets/images/standing_barbell_concentration_curl.gif'),
+    'waiter_curl.gif': require('../assets/images/waiter_curl.gif'),
+    'double_arm_dumbbell_curl.gif': require('../assets/images/double_arm_dumbbell_curl.gif'),
+    'dumbbell_curl.gif': require('../assets/images/dumbbell_curl.gif'),
+    'seated_incline_dumbbell_curl.gif': require('../assets/images/seated_incline_dumbbell_curl.gif'),
+    'lever_preacher_curl.gif': require('../assets/images/lever_preacher_curl.gif'),
+    'high_cable_single_arm_bicep_curl.gif': require('../assets/images/high_cable_single_arm_bicep_curl.gif'),
+    'one_arm_cable_curl.gif': require('../assets/images/one_arm_cable_curl.gif'),
+    'lying_cable_curl.gif': require('../assets/images/lying_cable_curl.gif'),
+    'onearm_singleleg_bench_dips.gif': require('../assets/images/onearm_singleleg_bench_dips.gif'),
+    'barbell_jm_press.gif': require('../assets/images/barbell_jm_press.gif'),
+    'one_arm_triceps_pushdown.gif': require('../assets/images/one_arm_triceps_pushdown.gif'),
+    'dumbbell_kickback.gif': require('../assets/images/dumbbell_kickback.gif'),
+    'onearm_reverse_pushdown.gif': require('../assets/images/onearm_reverse_pushdown.gif'),
+    'lever_triceps_dip.gif': require('../assets/images/lever_triceps_dip.gif'),
+    'lying_barbell_triceps_extension.gif': require('../assets/images/lying_barbell_triceps_extension.gif'),
+    'cable_tricep_kickback.gif': require('../assets/images/cable_tricep_kickback.gif'),
+    'triceps_dips_on_floor.gif': require('../assets/images/triceps_dips_on_floor.gif'),
+    'dumbbell_seated_front_and_back_tate_press.gif': require('../assets/images/dumbbell_seated_front_and_back_tate_press.gif'),
+    'full_planche.gif': require('../assets/images/full_planche.gif'),
+    'side_plank_hip_adduction.gif': require('../assets/images/side_plank_hip_adduction.gif'),
+    'medicine_ball_rotational_throw.gif': require('../assets/images/medicine_ball_rotational_throw.gif'),
+    'dragon_flag.gif': require('../assets/images/dragon_flag.gif'),
+    'alternate_leg_raises.gif': require('../assets/images/alternate_leg_raises.gif'),
+    'crunches.gif': require('../assets/images/crunches.gif'),
+    'bicycle_crunch.gif': require('../assets/images/bicycle_crunch.gif'),
+    'lying_scissor_kick.gif': require('../assets/images/lying_scissor_kick.gif'),
+    'bodyweight_plie_squat.gif': require('../assets/images/bodyweight_plie_squat.gif'),
+    'smith_machine_squat.gif': require('../assets/images/smith_machine_squat.gif'),
+    'dumbbell_cossack_squat.gif': require('../assets/images/dumbbell_cossack_squat.gif'),
+    'dumbbell_goblet_squat.gif': require('../assets/images/dumbbell_goblet_squat.gif'),
+    'curtsy_lunge.gif': require('../assets/images/curtsy_lunge.gif'),
+    'dumbbell_good_morning.gif': require('../assets/images/dumbbell_good_morning.gif'),
+    'dumbbell_squat.gif': require('../assets/images/dumbbell_squat.gif'),
+    'depth_jump_to_hurdle_hop.gif': require('../assets/images/depth_jump_to_hurdle_hop.gif'),
+    'power_lunge.gif': require('../assets/images/power_lunge.gif'),
+    'dumbbell_deadlift.gif': require('../assets/images/dumbbell_deadlift.gif'),
+    'seated_barbell_shoulder_press.gif': require('../assets/images/seated_barbell_shoulder_press.gif'),
+    'dumbbell_push_press.gif': require('../assets/images/dumbbell_push_press.gif'),
+    'standing_dumbbell_shoulder_press.gif': require('../assets/images/standing_dumbbell_shoulder_press.gif'),
+    'arm_circles.gif': require('../assets/images/arm_circles.gif'),
+    'dumbbell_lateral_raise.gif': require('../assets/images/dumbbell_lateral_raise.gif'),
+    'dumbbell_shoulder_press.gif': require('../assets/images/dumbbell_shoulder_press.gif'),
+    'cable_lateral_raise.gif': require('../assets/images/cable_lateral_raise.gif'),
+    '45_degree_incline_row.gif': require('../assets/images/45_degree_incline_row.gif'),
+    'lever_shoulder_press.gif': require('../assets/images/lever_shoulder_press.gif'),
+    'standing_close_grip_military_press.gif': require('../assets/images/standing_close_grip_military_press.gif'),
+    'barbell_military_press_overhead_press.gif': require('../assets/images/barbell_military_press_overhead_press.gif'),
+    'dumbbell_chest_supported_lateral_raises.gif': require('../assets/images/dumbbell_chest_supported_lateral_raises.gif'),
+    'dumbbell_6_way_raise.gif': require('../assets/images/dumbbell_6_way_raise.gif'),
+    'dumbbell_4_way_lateral_raise.gif': require('../assets/images/dumbbell_4_way_lateral_raise.gif'),
+    'two_arm_dumbbell_front_raise.gif': require('../assets/images/two_arm_dumbbell_front_raise.gif'),
+    'dumbbell_front_raise.gif': require('../assets/images/dumbbell_front_raise.gif'),
+    'leaning_single_arm_dumbbell_lateral_raise.gif': require('../assets/images/leaning_single_arm_dumbbell_lateral_raise.gif'),
+    'seated_behind_neck_press.gif': require('../assets/images/seated_behind_neck_press.gif'),
+    'rear_delt_fly_machine.gif': require('../assets/images/rear_delt_fly_machine.gif'),
+    'seated_rear_lateral_dumbbell_raise.gif': require('../assets/images/seated_rear_lateral_dumbbell_raise.gif'),
+    'half_arnold_press.gif': require('../assets/images/half_arnold_press.gif'),
 };
 
 type ExerciseDetailProps = NativeStackScreenProps<
@@ -133,21 +155,8 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.imageContainer}>
-          <View
-            style={{
-              width: 100,
-              height: 40,
-              backgroundColor: '#fff',
-              left: 70,
-              position: 'absolute',
-              zIndex: 1,
-            }}
-          />
-          <FastImage
-            source={imageMap[exercise.image]}
-            style={styles.image}
-            resizeMode="contain"
-          />
+          <View style={{ width: '100%', height: 35, backgroundColor: '#fff', position: 'absolute', zIndex: 1 }} />
+          <FastImage source={imageMap[exercise.image]} style={styles.image} resizeMode='contain' />
         </View>
 
         <View style={styles.content}>
@@ -155,9 +164,9 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
           <View style={styles.header}>
             <Text style={styles.title}>{exercise.name}</Text>
             <View style={styles.muscleGroupContainer}>
-              <Text style={styles.muscleGroupIcon}>
+              {/* <Text style={styles.muscleGroupIcon}>
                 {exercise.muscleGroup.icon}
-              </Text>
+              </Text> */}
               <Text style={styles.muscleGroupName}>
                 {exercise.muscleGroup.name}
               </Text>
@@ -199,13 +208,13 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
 
           {/* Description */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>📝 Mô tả</Text>
+            <Text style={styles.sectionTitle}>Mô tả bài tập</Text>
             <Text style={styles.description}>{exercise.description}</Text>
           </View>
 
           {/* Instructions */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>📋 Hướng dẫn</Text>
+            <Text style={styles.sectionTitle}>Hướng dẫn tập</Text>
             {exercise.instructions.map((instruction, index) => (
               <View key={index} style={styles.instructionItem}>
                 <Text style={styles.instructionNumber}>{index + 1}</Text>
@@ -216,7 +225,7 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
 
           {/* Breathing Technique */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>🫁 Kỹ thuật thở</Text>
+            <Text style={styles.sectionTitle}>Kỹ thuật thở</Text>
             <Text style={styles.breathingText}>
               {exercise.breathingTechnique}
             </Text>
@@ -224,7 +233,7 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
 
           {/* Tips */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>💡 Mẹo hay</Text>
+            <Text style={styles.sectionTitle}>Mẹo hay</Text>
             {exercise.tips.map((tip, index) => (
               <View key={index} style={styles.tipItem}>
                 <Text style={styles.tipBullet}>•</Text>
@@ -235,7 +244,7 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
 
           {/* Common Mistakes */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>⚠️ Lỗi thường gặp</Text>
+            <Text style={styles.sectionTitle}>Lỗi thường gặp</Text>
             {exercise.commonMistakes.map((mistake, index) => (
               <View key={index} style={styles.mistakeItem}>
                 <Text style={styles.mistakeBullet}>•</Text>
@@ -247,7 +256,7 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
           {/* Equipment */}
           {exercise.equipment.length > 0 && (
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>🏋️ Dụng cụ cần thiết</Text>
+              <Text style={styles.sectionTitle}>Dụng cụ cần thiết</Text>
               <View style={styles.equipmentContainer}>
                 {exercise.equipment.map((item, index) => (
                   <View key={index} style={styles.equipmentItem}>
@@ -264,7 +273,7 @@ export const ExerciseDetailScreen: React.FC<ExerciseDetailProps> = ({
               style={styles.timerButton}
               onPress={handleStartRestTimer}>
               <Text style={styles.timerButtonText}>
-                ⏱️ Bắt đầu hẹn giờ nghỉ
+                Bắt đầu hẹn giờ nghỉ
               </Text>
             </TouchableOpacity>
           </View>

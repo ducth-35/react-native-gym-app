@@ -61,7 +61,7 @@ export const TimerScreen: React.FC = () => {
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
-          <Text style={styles.title}>⏱️ Hẹn giờ tập luyện</Text>
+          <Text style={styles.title}>Hẹn giờ tập luyện</Text>
           <Text style={styles.subtitle}>
             Quản lý thời gian nghỉ và tập luyện
           </Text>
