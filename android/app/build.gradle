@@ -79,9 +79,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.app.news.explore"
+    namespace "com.easyworkout.app"
     defaultConfig {
-        applicationId "com.app.news.explore"
+        applicationId "com.easyworkout.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

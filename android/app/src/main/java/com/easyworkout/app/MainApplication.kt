@@ -1,4 +1,4 @@
-package com.app.news.explore
+package com.easyworkout.app
 
 import android.app.Application
 import com.facebook.react.PackageList

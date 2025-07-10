@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "NewsExplore.app"
-               BlueprintName = "NewsExplore"
-               ReferencedContainer = "container:NewsExplore.xcodeproj">
+               BuildableName = "EasyWorkout.app"
+               BlueprintName = "EasyWorkout"
+               ReferencedContainer = "container:EasyWorkout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "NewsExploreTests.xctest"
-               BlueprintName = "NewsExploreTests"
-               ReferencedContainer = "container:NewsExplore.xcodeproj">
+               BuildableName = "EasyWorkoutTests.xctest"
+               BlueprintName = "EasyWorkoutTests"
+               ReferencedContainer = "container:EasyWorkout.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "NewsExplore.app"
-            BlueprintName = "NewsExplore"
-            ReferencedContainer = "container:NewsExplore.xcodeproj">
+            BuildableName = "EasyWorkout.app"
+            BlueprintName = "EasyWorkout"
+            ReferencedContainer = "container:EasyWorkout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "NewsExplore.app"
-            BlueprintName = "NewsExplore"
-            ReferencedContainer = "container:NewsExplore.xcodeproj">
+            BuildableName = "EasyWorkout.app"
+            BlueprintName = "EasyWorkout"
+            ReferencedContainer = "container:EasyWorkout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
